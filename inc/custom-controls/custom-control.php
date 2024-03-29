@@ -1,8 +1,8 @@
 <?php
 /**
- * Travel Monster Custom Control
+ * TripHub Custom Control
  * 
- * @package Travel Monster
+ * @package TripHub
 */
 
 if( ! function_exists( 'triphub_register_custom_controls' ) ) :

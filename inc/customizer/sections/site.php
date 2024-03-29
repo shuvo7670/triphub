@@ -2,7 +2,7 @@
 /**
  * Site Title Setting
  *
- * @package Travel Monster
+ * @package TripHub
  */
 
 /**

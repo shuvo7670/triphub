@@ -2,7 +2,7 @@
 /**
  * Header Setting
  *
- * @package Travel Monster
+ * @package TripHub
  */
 
 function triphub_customize_register_layout_header( $wp_customize ) {

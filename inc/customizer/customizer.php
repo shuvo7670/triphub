@@ -1,8 +1,8 @@
 <?php
 /**
- * Travel Monster Theme Customizer
+ * TripHub Theme Customizer
  *
- * @package Travel Monster
+ * @package TripHub
  */
 
 /**

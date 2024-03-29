@@ -2,7 +2,7 @@
 /**
  * Pagination Settings
  *
- * @package Travel Monster
+ * @package TripHub
 */
 
 function triphub_customize_register_general_pagination( $wp_customize ){

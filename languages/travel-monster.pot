@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v3 or later.=!>
 msgid ""
 msgstr ""
-"Project-Id-Version: Travel Monster 1.1.4\n"
+"Project-Id-Version: TripHub 1.1.4\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/travel-monster\n"
 "POT-Creation-Date: 2024-02-05 10:21:51+00:00\n"
 "MIME-Version: 1.0\n"
@@ -1238,7 +1238,7 @@ msgid "Showing %1$s of %2$s Results"
 msgstr ""
 
 #: inc/extras.php:1534
-msgid "Get Travel Monster Pro"
+msgid "Get TripHub Pro"
 msgstr ""
 
 #: inc/getting-started/getting-started.php:17
@@ -1312,7 +1312,7 @@ msgstr ""
 
 #: inc/getting-started/tabs/demo-import-panel.php:13
 msgid ""
-"Travel Monster includes variety of starter templates suited for travel "
+"TripHub includes variety of starter templates suited for travel "
 "websites. New designs are added frequently to the collection. Visit "
 "%1$shere%2$s to see all the templates."
 msgstr ""
@@ -1435,9 +1435,9 @@ msgstr ""
 #: inc/getting-started/tabs/plugins-panel.php:11
 msgid ""
 "Below is a list of recommended plugins to install that will help you get "
-"the best out of Travel Monster. Though every plugin is optional, it is "
+"the best out of TripHub. Though every plugin is optional, it is "
 "recommended that you at least install WP Travel Engine & One Click Demo "
-"Import plugin to create a website similar to the Travel Monster demo."
+"Import plugin to create a website similar to the TripHub demo."
 msgstr ""
 
 #. Author of the plugin/theme
@@ -1538,7 +1538,7 @@ msgstr ""
 
 #: inc/getting-started/tabs/theme-club-panel.php:12
 msgid ""
-"Travel Monster is compatible with WP Travel Engine and all its add-ons, "
+"TripHub is compatible with WP Travel Engine and all its add-ons, "
 "designed especially for building SEO-friendly and feature-rich travel and "
 "tour websites. You can add extensive functionality to your travel website, "
 "be it setting a fixed tour departure date or a group discount or adding "
@@ -1606,7 +1606,7 @@ msgid "View All Articles"
 msgstr ""
 
 #: inc/template-functions.php:789
-msgid " Travel Monster by "
+msgid " TripHub by "
 msgstr ""
 
 #: inc/template-functions.php:791
@@ -2095,7 +2095,7 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. Theme Name of the plugin/theme
-msgid "Travel Monster"
+msgid "TripHub"
 msgstr ""
 
 #. Theme URI of the plugin/theme
@@ -2104,15 +2104,15 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Travel Monster is a free travel and tour booking WordPress theme for travel "
+"TripHub is a free travel and tour booking WordPress theme for travel "
 "agencies. It is powered by the WP Travel Engine plugin, the most popular "
-"travel booking plugin. You can use the Travel Monster theme to create "
+"travel booking plugin. You can use the TripHub theme to create "
 "websites such as travel agencies, tour operators, trekking, camping, "
 "mountaineering, surfing, city tour, rafting, jungle safari, hiking, "
 "tourism, summer holidays, winter holidays, wine tours, cruise websites, "
 "beach holidays, etc. You can create itineraries, destinations, activities, "
 "trip types. etc. Your website visitors can quickly search for tours and "
-"book them. Travel Monster is mobile-friendly, SEO-optimized, "
+"book them. TripHub is mobile-friendly, SEO-optimized, "
 "translation-ready and RTL-ready. Plus, it is compatible with Elementor and "
 "Gutenberg, offering more flexibility to customise your website. Check the "
 "demos here: https://wptravelenginedemo.com/travel-monster/."

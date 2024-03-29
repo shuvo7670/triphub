@@ -1,8 +1,8 @@
 <?php
 /**
- * Travel Monster Customizer Sortable Control.
+ * TripHub Customizer Sortable Control.
  * 
- * @package Travel Monster
+ * @package TripHub
  */
 
 // Exit if accessed directly.

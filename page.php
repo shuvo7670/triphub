@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Travel Monster
+ * @package TripHub
  */
 $defaults         = triphub_get_general_defaults();
 $ed_page_comments = get_theme_mod( 'ed_page_comments', $defaults['ed_page_comments'] );
@@ -20,7 +20,7 @@ get_header(); ?>
 		<div class="travel-monster-container-wrap">
 			<?php 
 				/**
-				 * Travel Monster After Container Wrap
+				 * TripHub After Container Wrap
 				*/
 				do_action( 'triphub_after_container_wrap' );
 			

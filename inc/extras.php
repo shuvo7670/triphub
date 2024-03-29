@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Travel Monster
+ * @package TripHub
  */
 
 if (!function_exists('triphub_posted_on')):
@@ -348,7 +348,7 @@ endif;
 
 if (!function_exists('triphub_mobile_header')):
     /**
-     * Travel monster Mobile Header
+     * TripHub Mobile Header
      */
     function triphub_mobile_header() {
         $defaults = triphub_get_general_defaults();
@@ -454,7 +454,7 @@ endif;
 
 if (!function_exists('triphub_sticky_header')):
     /**
-     * Travel monster Sticky Header
+     * TripHub Sticky Header
      */
     function triphub_sticky_header() {
         $defaults = triphub_get_general_defaults();
@@ -1462,7 +1462,7 @@ endif;
 
 if (!function_exists('triphub_pro_is_activated')):
     /**
-     * Check if Travel Monster Pro is activated
+     * Check if TripHub Pro is activated
      */
     function triphub_pro_is_activated() {
         return class_exists('triphub_Pro') ? true : false;
@@ -1531,7 +1531,7 @@ triphub_demo_importer_checked();
  * Filter to modify the Demo Importer Plus link
  */
 if ( ! triphub_pro_is_activated() ) {
-    add_filter( 'demo_importer_plus_get_pro_text', function() { return __( 'Get Travel Monster Pro', 'triphub' ); } );
+    add_filter( 'demo_importer_plus_get_pro_text', function() { return __( 'Get TripHub Pro', 'triphub' ); } );
     add_filter( 'demo_importer_plus_get_pro_url', function() { return esc_url('https://wptravelengine.com/wordpress-travel-themes/travel-monster-pro/'); } );
 } else {
     add_filter( 'demo_importer_plus_get_pro_text', '__return_false' );

@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package Travel Monster
+ * @package TripHub
 */
 
 if( ! function_exists( 'triphub_doctype' ) ) :
@@ -786,8 +786,8 @@ function triphub_footer_bottom(){ ?>
 								$partials->triphub_pro_ed_wp_link();
 							} else {
 								echo '<span class="author-link">'.
-								__( ' Travel Monster by ', 'triphub' ) .'
-								<a href="' . esc_url( 'https://wptravelengine.com/' ) .'" rel="nofollow" target="_blank">' . esc_html__( 'WP Travel Engine', 'triphub' ) . '.</a></span>';
+								__( ' TripHub by ', 'triphub' ) .'
+								<a href="' . esc_url( 'https://wptravelengine.com/' ) .'" rel="nofollow" target="_blank">' . esc_html__( 'MD Shakibul Islam', 'triphub' ) . '.</a></span>';
 								printf( esc_html__( '%1$s Powered by %2$s%3$s', 'triphub' ), '<span class="wp-link">', '<a href="'. esc_url( 'https://wordpress.org/', 'triphub' ) .'" rel="nofollow" target="_blank">WordPress</a>.', '</span>' );
 							}
 						?> 

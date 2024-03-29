@@ -1,4 +1,4 @@
-=== Travel Monster ===
+=== TripHub ===
 
 Contributors: wptravelengine
 Requires at least: 4.7
@@ -11,7 +11,7 @@ Tags: one-column, two-columns, right-sidebar, left-sidebar, footer-widgets, cust
 
 == Description ==
 
-Travel Monster is a free travel and tour booking WordPress theme for travel agencies. It is powered by the WP Travel Engine plugin, the most popular travel booking plugin. You can use the Travel Monster theme to create websites such as travel agencies, tour operators, trekking, camping, mountaineering, surfing, city tour, rafting, jungle safari, hiking, tourism, summer holidays, winter holidays, wine tours, cruise websites, beach holidays, etc. You can create itineraries, destinations, activities, trip types. etc. Your website visitors can quickly search for tours and book them. Travel Monster is mobile-friendly, SEO-optimized, translation-ready and RTL-ready. Plus, it is compatible with Elementor and Gutenberg, offering more flexibility to customise your website. Check the demos here: https://wptravelenginedemo.com/travel-monster/.
+TripHub is a free travel and tour booking WordPress theme for travel agencies. It is powered by the WP Travel Engine plugin, the most popular travel booking plugin. You can use the TripHub theme to create websites such as travel agencies, tour operators, trekking, camping, mountaineering, surfing, city tour, rafting, jungle safari, hiking, tourism, summer holidays, winter holidays, wine tours, cruise websites, beach holidays, etc. You can create itineraries, destinations, activities, trip types. etc. Your website visitors can quickly search for tours and book them. TripHub is mobile-friendly, SEO-optimized, translation-ready and RTL-ready. Plus, it is compatible with Elementor and Gutenberg, offering more flexibility to customise your website. Check the demos here: https://wptravelenginedemo.com/travel-monster/.
 
 == Installation ==
 
@@ -21,8 +21,8 @@ Travel Monster is a free travel and tour booking WordPress theme for travel agen
 
 == Copyright ==
 
-Travel Monster WordPress Theme, Copyright 2022 wptravelengine.com
-Travel Monster is distributed under the terms of the GNU GPL
+TripHub WordPress Theme, Copyright 2022 wptravelengine.com
+TripHub is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -34,7 +34,7 @@ but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
 GNU General Public License for more details.
 
-Travel Monster bundles the following third-party resources:
+TripHub bundles the following third-party resources:
 
 normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
 License: MIT
@@ -52,12 +52,12 @@ TGMPA, Copyright (c) 2011, Thomas Griffin
 License: GPL-2.0+
 Source: http://tgmpluginactivation.com/
 
-Travel Monster Theme incorporates code from Kirki, Copyright (c) 2017 Aristeides Stathopoulos
+TripHub Theme incorporates code from Kirki, Copyright (c) 2017 Aristeides Stathopoulos
 License: https://github.com/aristath/kirki/blob/develop/LICENSE
 Source: https://github.com/aristath/kirki
 
 Webfonts Loader
-Travel Monster local fonts feature is based on Webfonts Loader by WordPress Themes Team (WPTT). (https://github.com/WPTT/webfont-loader)
+TripHub local fonts feature is based on Webfonts Loader by WordPress Themes Team (WPTT). (https://github.com/WPTT/webfont-loader)
 License: MIT
 Source: https://github.com/WPTT/webfont-loader/blob/master/LICENSE
 

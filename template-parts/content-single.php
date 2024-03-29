@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Travel Monster
+ * @package TripHub
 */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); triphub_microdata( 'article' ); ?>>

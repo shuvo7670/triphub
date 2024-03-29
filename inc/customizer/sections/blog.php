@@ -2,7 +2,7 @@
 /**
  * Blog Settings
  *
- * @package Travel Monster
+ * @package TripHub
 */
 
 function triphub_customize_register_layout_blog( $wp_customize ) {

@@ -2,12 +2,12 @@
 /**
  * Helper functions for elementor widgets
  * 
- * @package Travel Monster
+ * @package TripHub
  */
 
 if( ! function_exists( 'triphub_add_theme_colors' ) ) :
     /**
-     * Travel Monster Theme Colors
+     * TripHub Theme Colors
      *
      * @param [type] $response
      * @param [type] $handler

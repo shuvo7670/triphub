@@ -1,6 +1,6 @@
 <?php
 /**
- * Travel Monster Customizer Radio-Buttonset Control.
+ * TripHub Customizer Radio-Buttonset Control.
  */
 
 // Exit if accessed directly.

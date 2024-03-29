@@ -2,7 +2,7 @@
 /**
  * The range slider Customizer control.
  *
- * @package Travel Monster
+ * @package TripHub
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

@@ -1,6 +1,6 @@
 <?php
 /**
- * Travel Monster Customizer Group Control.
+ * TripHub Customizer Group Control.
  */
 
 // Exit if accessed directly.

@@ -2,7 +2,7 @@
 /**
  * Customizer Settings Defaults 
  * 
- * @package Travel Monster
+ * @package TripHub
  */
 
 if( ! function_exists( 'triphub_get_site_defaults' ) ) :
@@ -35,7 +35,7 @@ function triphub_get_typography_defaults(){
     $defaults = array(
         
         'primary_font' => array(
-            'family'         => 'Poppins',
+            'family'         => 'Jost',
             'variants'       => '',
             'category'       => '',
             'weight'         => '400',

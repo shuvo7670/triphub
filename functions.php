@@ -1,10 +1,10 @@
 <?php
 /**
- * Travel Monster functions and definitions
+ * TripHub functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Travel Monster
+ * @package TripHub
  */
 
 $triphub_theme_data = wp_get_theme();
@@ -82,10 +82,7 @@ require get_template_directory() . '/inc/custom-header.php';
 */
 require get_template_directory() . '/inc/tgmpa/recommended-plugins.php';
 
-/**
- * Getting Started
-*/
-require get_template_directory() . '/inc/getting-started/getting-started.php';
+
 /**
  * Load Jetpack compatibility file.
  */

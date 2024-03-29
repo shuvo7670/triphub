@@ -1,8 +1,8 @@
 <?php 
 /**
-* Travel Monster Metabox for Sidebar Layout
+* TripHub Metabox for Sidebar Layout
 *
-* @package Travel Monster
+* @package TripHub
 *
 */ 
 

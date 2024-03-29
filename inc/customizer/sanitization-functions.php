@@ -2,7 +2,7 @@
 /**
  * Sanitization Functions
  * 
- * @package Travel Monster
+ * @package TripHub
 */
 
 if( ! function_exists( 'triphub_sanitize_empty_absint' ) ) :

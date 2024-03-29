@@ -87,7 +87,7 @@ function triphub_sync_root_variable(thememod, selector, property) {
 	});
 }
 
-// Travel Monster Font Family Update
+// TripHub Font Family Update
 function triphub_typo_update_font_family_css(control, selector, cssProperty = 'font-family' ) {
 	wp.customize(control, function (value) {
 		value.bind(function (value, oldValue) {
@@ -123,7 +123,7 @@ function triphub_typo_update_font_family_css(control, selector, cssProperty = 'f
 	});
 }
 
-//Travel Monster Font Weight and others update 
+//TripHub Font Weight and others update 
 function triphub_typography_live_update(id, responsive, selector, property, unit, settings) {
 	settings = typeof settings !== 'undefined' ? settings : '';
 	
@@ -148,7 +148,7 @@ function triphub_typography_live_update(id, responsive, selector, property, unit
 		});
 	});
 }
-//Travel Monster partial refresh for slider customizer settings
+//TripHub partial refresh for slider customizer settings
 function triphub_slider_live_update(settings, responsive, selector, property, unit) {
 	settings = typeof settings !== 'undefined' ? settings : '';
 	
@@ -173,7 +173,7 @@ function triphub_slider_live_update(settings, responsive, selector, property, un
 	});
 }
 
-//Travel Monster partial refresh for spacing customizer settings
+//TripHub partial refresh for spacing customizer settings
 function triphub_spacing_live_update(settings, responsive, selector, property, unit) {
 	settings = typeof settings !== 'undefined' ? settings : '';
 	

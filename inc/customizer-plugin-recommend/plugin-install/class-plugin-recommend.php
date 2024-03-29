@@ -1,6 +1,6 @@
 <?php
 /**
- * Travel Monster Plugin Recommend Control
+ * TripHub Plugin Recommend Control
  * 
  * @package triphub
  */

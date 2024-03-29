@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package Travel Monster
+ * @package TripHub
  */
 $defaults    = triphub_get_general_defaults();
 $error_image = get_theme_mod( '404_image', $defaults['404_image'] );

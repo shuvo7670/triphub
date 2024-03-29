@@ -1,6 +1,6 @@
 <?php
 /**
- * Travel Monster Customizer Note Control.
+ * TripHub Customizer Note Control.
  * 
  * @package triphub
 */

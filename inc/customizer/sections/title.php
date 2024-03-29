@@ -2,7 +2,7 @@
 /**
  * Title Setting
  *
- * @package Travel Monster
+ * @package TripHub
  */
 
 function triphub_customize_register_titleofcustomizer_section( $wp_customize ) {

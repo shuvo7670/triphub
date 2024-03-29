@@ -1,8 +1,8 @@
 <?php
 /**
- * Travel Monster Customizer Radio Image Control.
+ * TripHub Customizer Radio Image Control.
  * 
- * @package Travel Monster
+ * @package TripHub
 */
 
 // Exit if accessed directly.

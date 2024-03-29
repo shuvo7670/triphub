@@ -2,7 +2,7 @@
 /**
  * SEO Settings
  *
- * @package Travel Monster
+ * @package TripHub
 */
 
 function triphub_customize_register_seo_setting( $wp_customize ){

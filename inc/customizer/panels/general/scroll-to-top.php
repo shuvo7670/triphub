@@ -2,7 +2,7 @@
 /**
  * Scroll to Top Settings
  *
- * @package Travel Monster
+ * @package TripHub
 */
 
 function triphub_customize_register_general_scroll_to_top( $wp_customize ){

@@ -2,7 +2,7 @@
 /**
  * Social Network Settings
  *
- * @package Travel Monster
+ * @package TripHub
 */
 
 function triphub_customize_register_footer_social_network( $wp_customize ){

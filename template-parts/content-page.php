@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Travel Monster
+ * @package TripHub
 */
 $defaults       = triphub_get_general_defaults();
 $page_alignment = get_theme_mod( 'page_alignment', $defaults[ 'page_alignment' ] );

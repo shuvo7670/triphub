@@ -1,6 +1,6 @@
 <?php
 /**
- * Travel Monster Customizer Notification Section Class.
+ * TripHub Customizer Notification Section Class.
  *
  * @package triphub
  */

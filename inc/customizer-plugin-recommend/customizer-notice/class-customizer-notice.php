@@ -1,6 +1,6 @@
 <?php
 /**
- * Travel Monster Customizer Notification System.
+ * TripHub Customizer Notification System.
  *
  * @package triphub
  */

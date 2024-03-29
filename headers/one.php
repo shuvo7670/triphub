@@ -2,7 +2,7 @@
 /**
  * Header Layout One
  * 
- * @package Travel Monster
+ * @package TripHub
 */
 $defaults           = triphub_get_general_defaults();
 $siteDefaults       = triphub_get_site_defaults();

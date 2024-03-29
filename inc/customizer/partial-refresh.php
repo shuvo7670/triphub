@@ -1,8 +1,8 @@
 <?php
 /**
- * Travel Monster Customizer Partials
+ * TripHub Customizer Partials
  *
- * @package Travel Monster
+ * @package TripHub
 */
 
 if ( ! function_exists( 'triphub_customize_partial_blogname' ) ) :

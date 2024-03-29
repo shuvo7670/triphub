@@ -2,7 +2,7 @@
 /**
  * Group title
  *
- * @package Travel Monster
+ * @package TripHub
  */
 
 /**

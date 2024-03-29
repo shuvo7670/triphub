@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Travel Monster
+ * @package TripHub
  */
 
 get_header(); ?>
@@ -25,7 +25,7 @@ get_header(); ?>
 		<div class="travel-monster-container-wrap">
 			<?php 
 				/**
-				 * Travel Monster After Container Wrap
+				 * TripHub After Container Wrap
 				*/
 				do_action( 'triphub_before_container_wrap' );
 			

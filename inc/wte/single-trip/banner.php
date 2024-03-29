@@ -1,6 +1,6 @@
 <?php
 /**
- * Travel Monster Single Trip Banner functions lists here
+ * TripHub Single Trip Banner functions lists here
  *
  * @package triphub
  */

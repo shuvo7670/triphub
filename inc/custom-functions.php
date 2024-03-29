@@ -1,8 +1,8 @@
 <?php
 /**
- * Travel Monster Custom functions and definitions
+ * TripHub Custom functions and definitions
  *
- * @package Travel Monster
+ * @package TripHub
 */
 
 if ( ! function_exists( 'triphub_setup' ) ) :
@@ -19,7 +19,7 @@ if ( ! function_exists( 'triphub_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on Travel Monster, use a find and replace
+		 * If you're building a theme based on TripHub, use a find and replace
 		 * to change 'triphub' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'triphub', get_template_directory() . '/languages' );

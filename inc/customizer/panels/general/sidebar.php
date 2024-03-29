@@ -2,7 +2,7 @@
 /**
  * Sidebar Settings
  *
- * @package Travel Monster
+ * @package TripHub
 */
 
 function triphub_customize_register_general_sidebar( $wp_customize ){

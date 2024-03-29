@@ -1,6 +1,6 @@
 <?php
 /**
- * Travel Monster Customizer Toggle Control.
+ * TripHub Customizer Toggle Control.
  * 
  * @package triphub
 */

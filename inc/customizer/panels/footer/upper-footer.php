@@ -2,7 +2,7 @@
 /**
  * Upper Footer Settings
  *
- * @package Travel Monster
+ * @package TripHub
 */
 
 function triphub_customize_register_upper_footer( $wp_customize ){

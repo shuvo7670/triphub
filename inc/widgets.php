@@ -1,9 +1,9 @@
 <?php
 /**
- * Travel Monster Widget Areas
+ * TripHub Widget Areas
  * 
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- * @package Travel Monster
+ * @package TripHub
 */
 
 if( ! function_exists( 'triphub_widgets_init' ) ):

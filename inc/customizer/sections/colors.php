@@ -2,7 +2,7 @@
 /**
  * Colors
  *
- * @package Travel Monster
+ * @package TripHub
  */
 
 function triphub_customize_register_colors_panel( $wp_customize ) {

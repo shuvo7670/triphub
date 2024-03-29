@@ -1,6 +1,6 @@
 <?php
 /**
- * Travel Monster Plugin install helper.
+ * TripHub Plugin install helper.
  *
  * @package triphub
  */

@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Travel Monster
+ * @package TripHub
  */
 
 /**
