@@ -8,12 +8,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'triphub_Radio_Buttonset_Control' ) ) {
+if ( ! class_exists( 'Triphub_Radio_Buttonset_Control' ) ) {
 
 	/**
 	 * Radio Buttonset control (modified radio)
 	 */
-	class triphub_Radio_Buttonset_Control extends WP_Customize_Control {
+	class Triphub_Radio_Buttonset_Control extends WP_Customize_Control {
 
 		public $type = 'radio-buttonset';
 

@@ -46,7 +46,7 @@ require get_template_directory() . '/inc/customizer/active-callback.php';
 function triphub_customize_preview_js() {
 	$build        = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '/build' : '';
 	$suffix       = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-	wp_enqueue_script( 'triphub-customizer', get_template_directory_uri() . '/js' . $build . '/customizer' . $suffix . '.js', array( 'customize-preview' ), triphub_THEME_VERSION, true );
+	wp_enqueue_script( 'triphub-customizer', get_template_directory_uri() . '/js' . $build . '/customizer' . $suffix . '.js', array( 'customize-preview' ), TRIPHUB_THEME_VERSION, true );
 
 	wp_localize_script(
 		'triphub-customizer',
@@ -98,8 +98,8 @@ function triphub_get_media_query( $name ) {
  */
 function triphub_control_inline_scripts() {
 
-	wp_enqueue_style('triphub-customize', get_template_directory_uri() . '/inc/css/customize.css', array(), triphub_THEME_VERSION );
-	wp_enqueue_script('triphub-customize', get_template_directory_uri() . '/inc/js/customize.js', array('jquery', 'customize-controls'), triphub_THEME_VERSION, true);
+	wp_enqueue_style('triphub-customize', get_template_directory_uri() . '/inc/css/customize.css', array(), TRIPHUB_THEME_VERSION );
+	wp_enqueue_script('triphub-customize', get_template_directory_uri() . '/inc/js/customize.js', array('jquery', 'customize-controls'), TRIPHUB_THEME_VERSION, true);
 	
 	wp_localize_script( 'triphub-customize', 'triphub_data',
 		array(

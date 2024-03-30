@@ -28,7 +28,7 @@ function triphub_customize_register_bottom_footer( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'bottom_footer_copyright_group',
             array(
@@ -52,7 +52,7 @@ function triphub_customize_register_bottom_footer( $wp_customize ){
     );
     
     $wp_customize->add_control(
-        new triphub_Text_Control( 
+        new Triphub_Text_Control( 
             $wp_customize,
             'footer_copyright',
             array(
@@ -80,7 +80,7 @@ function triphub_customize_register_bottom_footer( $wp_customize ){
     );
     
     $wp_customize->add_control(
-        new triphub_Text_Control( 
+        new Triphub_Text_Control( 
             $wp_customize,
             'payment_label',
             array(
@@ -125,7 +125,7 @@ function triphub_customize_register_bottom_footer( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'bottom_footer_color_group',
             array(
@@ -148,7 +148,7 @@ function triphub_customize_register_bottom_footer( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Alpha_Color_Customize_Control(
+        new Triphub_Alpha_Color_Customize_Control(
             $wp_customize,
             'bottom_footer_bg_color',
             array(
@@ -169,7 +169,7 @@ function triphub_customize_register_bottom_footer( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Alpha_Color_Customize_Control(
+        new Triphub_Alpha_Color_Customize_Control(
             $wp_customize,
             'bottom_footer_text_color',
             array(
@@ -190,7 +190,7 @@ function triphub_customize_register_bottom_footer( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Alpha_Color_Customize_Control(
+        new Triphub_Alpha_Color_Customize_Control(
             $wp_customize,
             'bottom_footer_link_initial_color',
             array(
@@ -211,7 +211,7 @@ function triphub_customize_register_bottom_footer( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Alpha_Color_Customize_Control(
+        new Triphub_Alpha_Color_Customize_Control(
             $wp_customize,
             'bottom_footer_link_hover_color',
             array(

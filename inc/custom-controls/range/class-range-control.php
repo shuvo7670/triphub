@@ -9,14 +9,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'triphub_Range_Slider_Control' ) ) {
+if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Triphub_Range_Slider_Control' ) ) {
 	/**
 	 * Create a range slider control.
 	 * This control allows you to add responsive settings.
 	 *
 	 * @since 1.3.47
 	 */
-	class triphub_Range_Slider_Control extends WP_Customize_Control {
+	class Triphub_Range_Slider_Control extends WP_Customize_Control {
 		/**
 		 * The control type.
 		 *

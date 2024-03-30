@@ -56,7 +56,7 @@ function triphub_customize_register( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Toggle_Control(
+        new Triphub_Toggle_Control(
             $wp_customize,
             'hide_title',
             array(
@@ -77,7 +77,7 @@ function triphub_customize_register( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Toggle_Control(
+        new Triphub_Toggle_Control(
             $wp_customize,
             'hide_tagline',
             array(
@@ -117,7 +117,7 @@ function triphub_customize_register( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'logo_width',
             array(
@@ -166,7 +166,7 @@ function triphub_customize_register( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'site_title_group',
             array(
@@ -225,7 +225,7 @@ function triphub_customize_register( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Typography_Customize_Control(
+        new Triphub_Typography_Customize_Control(
             $wp_customize,
             'site_title_typography',
             array(
@@ -270,7 +270,7 @@ function triphub_customize_register( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'site_title[font_size]',
             array(
@@ -339,7 +339,7 @@ function triphub_customize_register( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'site_title[line_height]',
             array(
@@ -408,7 +408,7 @@ function triphub_customize_register( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'site_title[letter_spacing]',
             array(
@@ -446,7 +446,7 @@ function triphub_customize_register( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Typography_Customize_Control(
+        new Triphub_Typography_Customize_Control(
             $wp_customize,
             'site_title_typography_weight',
             array(
@@ -461,7 +461,7 @@ function triphub_customize_register( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Typography_Customize_Control(
+        new Triphub_Typography_Customize_Control(
             $wp_customize,
             'site_title_typography_transform',
             array(
@@ -485,7 +485,7 @@ function triphub_customize_register( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'site_title_color_group',
             array(
@@ -508,7 +508,7 @@ function triphub_customize_register( $wp_customize ) {
         )
     );
     $wp_customize->add_control(
-        new triphub_Alpha_Color_Customize_Control(
+        new Triphub_Alpha_Color_Customize_Control(
             $wp_customize,
             'site_title_color',
             array(
@@ -531,7 +531,7 @@ function triphub_customize_register( $wp_customize ) {
     );
 
     $wp_customize->add_control( 
-        new triphub_Alpha_Color_Customize_Control( 
+        new Triphub_Alpha_Color_Customize_Control( 
             $wp_customize, 
             'site_tagline_color', 
             array(

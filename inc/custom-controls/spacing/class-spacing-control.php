@@ -4,8 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! function_exists( 'triphub_Spacing_Control' ) ) :
-class triphub_Spacing_Control extends WP_Customize_Control {
+if ( ! function_exists( 'Triphub_Spacing_Control' ) ) :
+class Triphub_Spacing_Control extends WP_Customize_Control {
 
 	public $type = 'triphub-spacing';
 
@@ -19,8 +19,8 @@ class triphub_Spacing_Control extends WP_Customize_Control {
 	}
 
 	public function enqueue() {
-		wp_enqueue_script( 'triphub-spacing-customizer', trailingslashit( get_template_directory_uri() )  . 'inc/custom-controls/spacing/spacing-customizer.js', array( 'customize-controls' ), triphub_THEME_VERSION, true );
-		wp_enqueue_style( 'triphub-spacing-customizer-controls-css', trailingslashit( get_template_directory_uri()  ) . 'inc/custom-controls/spacing/spacing-customizer.css', array(), triphub_THEME_VERSION );
+		wp_enqueue_script( 'triphub-spacing-customizer', trailingslashit( get_template_directory_uri() )  . 'inc/custom-controls/spacing/spacing-customizer.js', array( 'customize-controls' ), TRIPHUB_THEME_VERSION, true );
+		wp_enqueue_style( 'triphub-spacing-customizer-controls-css', trailingslashit( get_template_directory_uri()  ) . 'inc/custom-controls/spacing/spacing-customizer.css', array(), TRIPHUB_THEME_VERSION );
 	}
 
 	public function to_json() {

@@ -24,7 +24,7 @@ function triphub_customize_register_colors_panel( $wp_customize ) {
     );
 
     $wp_customize->add_control( 
-        new triphub_Alpha_Color_Customize_Control( 
+        new Triphub_Alpha_Color_Customize_Control( 
             $wp_customize, 
             'primary_color', 
             array(
@@ -46,7 +46,7 @@ function triphub_customize_register_colors_panel( $wp_customize ) {
     );
 
     $wp_customize->add_control( 
-        new triphub_Alpha_Color_Customize_Control( 
+        new Triphub_Alpha_Color_Customize_Control( 
             $wp_customize, 
             'secondary_color', 
             array(
@@ -68,7 +68,7 @@ function triphub_customize_register_colors_panel( $wp_customize ) {
     );
 
     $wp_customize->add_control( 
-        new triphub_Alpha_Color_Customize_Control( 
+        new Triphub_Alpha_Color_Customize_Control( 
             $wp_customize, 
             'body_font_color', 
             array(
@@ -90,7 +90,7 @@ function triphub_customize_register_colors_panel( $wp_customize ) {
     );
 
     $wp_customize->add_control( 
-        new triphub_Alpha_Color_Customize_Control( 
+        new Triphub_Alpha_Color_Customize_Control( 
             $wp_customize, 
             'heading_color', 
             array(
@@ -112,7 +112,7 @@ function triphub_customize_register_colors_panel( $wp_customize ) {
     );
 
     $wp_customize->add_control( 
-        new triphub_Alpha_Color_Customize_Control( 
+        new Triphub_Alpha_Color_Customize_Control( 
             $wp_customize, 
             'section_bg_color', 
             array(
@@ -134,7 +134,7 @@ function triphub_customize_register_colors_panel( $wp_customize ) {
     );
 
     $wp_customize->add_control( 
-        new triphub_Alpha_Color_Customize_Control( 
+        new Triphub_Alpha_Color_Customize_Control( 
             $wp_customize, 
             'site_bg_color', 
             array(

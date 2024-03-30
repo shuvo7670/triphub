@@ -25,16 +25,16 @@ function triphub_register_custom_controls( $wp_customize ){
     require_once get_template_directory() . '/inc/custom-controls/note/class-note-control.php';
     require_once get_template_directory() . '/inc/custom-controls/text/class-text-control.php';
 
-    $wp_customize->register_control_type( 'triphub_Range_Slider_Control' );
-    $wp_customize->register_control_type( 'triphub_Radio_Image_Control' );   
-    $wp_customize->register_control_type( 'triphub_Sortable_Control' ); 
-    $wp_customize->register_control_type( 'triphub_Alpha_Color_Customize_Control' ); 
-    $wp_customize->register_control_type( 'triphub_Radio_Buttonset_Control' );
-    $wp_customize->register_control_type( 'triphub_Spacing_Control' );
-    $wp_customize->register_control_type( 'triphub_Select_Control' );
-    $wp_customize->register_control_type( 'triphub_Group_Control' );
-    $wp_customize->register_control_type( 'triphub_Typography_Customize_Control' );
-    $wp_customize->register_control_type( 'triphub_Toggle_Control' );
+    $wp_customize->register_control_type( 'Triphub_Range_Slider_Control' );
+    $wp_customize->register_control_type( 'Triphub_Radio_Image_Control' );   
+    $wp_customize->register_control_type( 'Triphub_Sortable_Control' ); 
+    $wp_customize->register_control_type( 'Triphub_Alpha_Color_Customize_Control' ); 
+    $wp_customize->register_control_type( 'Triphub_Radio_Buttonset_Control' );
+    $wp_customize->register_control_type( 'Triphub_Spacing_Control' );
+    $wp_customize->register_control_type( 'Triphub_Select_Control' );
+    $wp_customize->register_control_type( 'Triphub_Group_Control' );
+    $wp_customize->register_control_type( 'Triphub_Typography_Customize_Control' );
+    $wp_customize->register_control_type( 'Triphub_Toggle_Control' );
     
 }
 endif;

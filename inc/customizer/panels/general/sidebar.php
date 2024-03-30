@@ -29,7 +29,7 @@ function triphub_customize_register_general_sidebar( $wp_customize ){
     );
     
     $wp_customize->add_control(
-		new triphub_Radio_Image_Control(
+		new Triphub_Radio_Image_Control(
 			$wp_customize,
 			'layout_style',
 			array(
@@ -77,7 +77,7 @@ function triphub_customize_register_general_sidebar( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'sidebar_width',
             array(
@@ -134,7 +134,7 @@ function triphub_customize_register_general_sidebar( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'widgets_spacing',
             array(
@@ -182,7 +182,7 @@ function triphub_customize_register_general_sidebar( $wp_customize ){
     );
     
     $wp_customize->add_control(
-		new triphub_Toggle_Control( 
+		new Triphub_Toggle_Control( 
 			$wp_customize,
 			'ed_last_widget_sticky',
 			array(

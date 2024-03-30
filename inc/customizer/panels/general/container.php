@@ -48,7 +48,7 @@ function triphub_customize_register_general_container( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'container_width',
             array(
@@ -115,7 +115,7 @@ function triphub_customize_register_general_container( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'fullwidth_centered',
             array(

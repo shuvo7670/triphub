@@ -58,7 +58,7 @@ function triphub_customize_register_general_button( $wp_customize ){
     );   
 
     $wp_customize->add_control(
-        new triphub_Spacing_Control(
+        new Triphub_Spacing_Control(
             $wp_customize,
             'btn_roundness',
             array(
@@ -115,7 +115,7 @@ function triphub_customize_register_general_button( $wp_customize ){
     );   
 
     $wp_customize->add_control(
-        new triphub_Spacing_Control(
+        new Triphub_Spacing_Control(
             $wp_customize,
             'button_padding',
             array(
@@ -145,7 +145,7 @@ function triphub_customize_register_general_button( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'btn_appearance_initial_group',
             array(
@@ -167,7 +167,7 @@ function triphub_customize_register_general_button( $wp_customize ){
         )
     );
     $wp_customize->add_control(
-        new triphub_Alpha_Color_Customize_Control(
+        new Triphub_Alpha_Color_Customize_Control(
             $wp_customize,
             'btn_text_color_initial',
             array(
@@ -187,7 +187,7 @@ function triphub_customize_register_general_button( $wp_customize ){
         )
     );
     $wp_customize->add_control(
-        new triphub_Alpha_Color_Customize_Control(
+        new Triphub_Alpha_Color_Customize_Control(
             $wp_customize,
             'btn_bg_color_initial',
             array(
@@ -207,7 +207,7 @@ function triphub_customize_register_general_button( $wp_customize ){
         )
     );
     $wp_customize->add_control(
-        new triphub_Alpha_Color_Customize_Control(
+        new Triphub_Alpha_Color_Customize_Control(
             $wp_customize,
             'btn_border_color_initial',
             array(
@@ -227,7 +227,7 @@ function triphub_customize_register_general_button( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'btn_appearance_hover_group',
             array(
@@ -250,7 +250,7 @@ function triphub_customize_register_general_button( $wp_customize ){
     );
     
     $wp_customize->add_control(
-        new triphub_Alpha_Color_Customize_Control(
+        new Triphub_Alpha_Color_Customize_Control(
             $wp_customize,
             'btn_text_color_hover',
             array(
@@ -271,7 +271,7 @@ function triphub_customize_register_general_button( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Alpha_Color_Customize_Control(
+        new Triphub_Alpha_Color_Customize_Control(
             $wp_customize,
             'btn_bg_color_hover',
             array(
@@ -291,7 +291,7 @@ function triphub_customize_register_general_button( $wp_customize ){
         )
     );
     $wp_customize->add_control(
-        new triphub_Alpha_Color_Customize_Control(
+        new Triphub_Alpha_Color_Customize_Control(
             $wp_customize,
             'btn_border_color_hover',
             array(
@@ -315,7 +315,7 @@ function triphub_customize_register_general_button( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'btn_typography_group',
             array(
@@ -375,7 +375,7 @@ function triphub_customize_register_general_button( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Typography_Customize_Control(
+        new Triphub_Typography_Customize_Control(
             $wp_customize,
             'general_button_section',
             array(
@@ -419,7 +419,7 @@ function triphub_customize_register_general_button( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'button[font_size]',
             array(
@@ -486,7 +486,7 @@ function triphub_customize_register_general_button( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'button[line_height]',
             array(
@@ -554,7 +554,7 @@ function triphub_customize_register_general_button( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'button[letter_spacing]',
             array(
@@ -594,7 +594,7 @@ function triphub_customize_register_general_button( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Typography_Customize_Control(
+        new Triphub_Typography_Customize_Control(
             $wp_customize,
             'general_button_section_weight',
             array(
@@ -608,7 +608,7 @@ function triphub_customize_register_general_button( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Typography_Customize_Control(
+        new Triphub_Typography_Customize_Control(
             $wp_customize,
             'general_button_section_transform',
             array(

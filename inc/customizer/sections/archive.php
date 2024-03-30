@@ -29,7 +29,7 @@ function triphub_customize_register_layout_blog_archive( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'archive_title_group',
             array(
@@ -51,7 +51,7 @@ function triphub_customize_register_layout_blog_archive( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Toggle_Control( 
+		new Triphub_Toggle_Control( 
 			$wp_customize,
 			'ed_archive_prefix',
 			array(
@@ -73,7 +73,7 @@ function triphub_customize_register_layout_blog_archive( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Toggle_Control( 
+		new Triphub_Toggle_Control( 
 			$wp_customize,
 			'ed_archive_title',
 			array(
@@ -100,7 +100,7 @@ function triphub_customize_register_layout_blog_archive( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Toggle_Control( 
+		new Triphub_Toggle_Control( 
 			$wp_customize,
 			'ed_archive_description',
 			array(
@@ -127,7 +127,7 @@ function triphub_customize_register_layout_blog_archive( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Toggle_Control( 
+		new Triphub_Toggle_Control( 
 			$wp_customize,
 			'ed_archive_post_count',
 			array(
@@ -154,7 +154,7 @@ function triphub_customize_register_layout_blog_archive( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Radio_Buttonset_Control(
+		new Triphub_Radio_Buttonset_Control(
 			$wp_customize,
 			'archive_alignment',
 			array(
@@ -180,7 +180,7 @@ function triphub_customize_register_layout_blog_archive( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'archive_page_sidebar_layout_group',
             array(
@@ -202,7 +202,7 @@ function triphub_customize_register_layout_blog_archive( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Radio_Image_Control(
+		new Triphub_Radio_Image_Control(
 			$wp_customize,
 			'archive_sidebar_layout',
 			array(

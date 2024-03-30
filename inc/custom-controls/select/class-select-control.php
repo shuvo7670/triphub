@@ -10,11 +10,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'triphub_Select_Control' ) ){
+if ( ! class_exists( 'Triphub_Select_Control' ) ){
 	/**
 	 * Select control.
     */
-	class triphub_Select_Control extends WP_Customize_Control {
+	class Triphub_Select_Control extends WP_Customize_Control {
 
 		public $type = 'triphub-select';
 

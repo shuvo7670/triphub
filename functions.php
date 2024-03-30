@@ -6,11 +6,12 @@
  *
  * @package TripHub
  */
+require_once get_template_directory() . '/inc/helper/constants.php';
 
 $triphub_theme_data = wp_get_theme();
-if( ! defined( 'triphub_THEME_VERSION' ) ) define( 'triphub_THEME_VERSION', $triphub_theme_data->get( 'Version' ) );
-if( ! defined( 'triphub_THEME_NAME' ) ) define( 'triphub_THEME_NAME', $triphub_theme_data->get( 'Name' ) );
-if( ! defined( 'triphub_THEME_TEXTDOMAIN' ) ) define( 'triphub_THEME_TEXTDOMAIN', $triphub_theme_data->get( 'TextDomain' ) );
+if( ! defined( 'TRIPHUB_THEME_VERSION' ) ) define( 'TRIPHUB_THEME_VERSION', $triphub_theme_data->get( 'Version' ) );
+if( ! defined( 'TRIPHUB_THEME_NAME' ) ) define( 'TRIPHUB_THEME_NAME', $triphub_theme_data->get( 'Name' ) );
+if( ! defined( 'TRIPHUB_THEME_TEXTDOMAIN' ) ) define( 'TRIPHUB_THEME_TEXTDOMAIN', $triphub_theme_data->get( 'TextDomain' ) );
 
 /**
  * Custom Functions.
@@ -82,6 +83,10 @@ require get_template_directory() . '/inc/custom-header.php';
 */
 require get_template_directory() . '/inc/tgmpa/recommended-plugins.php';
 
+/**
+ * Helper
+*/
+require get_template_directory() . '/inc/helper/assets.php';
 
 /**
  * Load Jetpack compatibility file.

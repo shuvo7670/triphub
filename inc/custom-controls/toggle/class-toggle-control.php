@@ -10,11 +10,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! class_exists( 'triphub_Toggle_Control' ) ){
+if ( ! class_exists( 'Triphub_Toggle_Control' ) ){
 	/**
 	 * Toggle control (modified checkbox).
     */
-	class triphub_Toggle_Control extends WP_Customize_Control{
+	class Triphub_Toggle_Control extends WP_Customize_Control{
 		public $type = 'toggle';
         
         public $tooltip = '';

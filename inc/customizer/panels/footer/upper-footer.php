@@ -28,7 +28,7 @@ function triphub_customize_register_upper_footer( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Alpha_Color_Customize_Control(
+        new Triphub_Alpha_Color_Customize_Control(
             $wp_customize,
             'upper_footer_bg_color',
             array(
@@ -48,7 +48,7 @@ function triphub_customize_register_upper_footer( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Alpha_Color_Customize_Control(
+        new Triphub_Alpha_Color_Customize_Control(
             $wp_customize,
             'upper_footer_text_color',
             array(
@@ -68,7 +68,7 @@ function triphub_customize_register_upper_footer( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Alpha_Color_Customize_Control(
+        new Triphub_Alpha_Color_Customize_Control(
             $wp_customize,
             'upper_footer_link_hover_color',
             array(
@@ -89,7 +89,7 @@ function triphub_customize_register_upper_footer( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Alpha_Color_Customize_Control(
+        new Triphub_Alpha_Color_Customize_Control(
             $wp_customize,
             'upper_footer_widget_heading_color',
             array(

@@ -8,7 +8,7 @@
 /**
  * Implement group title
  */
-class triphub_Group_Title extends WP_Customize_Section {
+class Triphub_Group_Title extends WP_Customize_Section {
 	/**
 	 * Type of this section.
 	 *

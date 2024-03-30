@@ -10,9 +10,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if( ! class_exists( 'triphub_Note_Control' ) ){
+if( ! class_exists( 'Triphub_Note_Control' ) ){
 
-	class triphub_Note_Control extends WP_Customize_Control {
+	class Triphub_Note_Control extends WP_Customize_Control {
 		public $group;
 		public $collapsed = true;
 		

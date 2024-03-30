@@ -10,11 +10,11 @@ if( ! defined( 'ABSPATH' ) ){
 	exit;
 }
 
-if( ! class_exists( 'triphub_Radio_Image_Control' ) ){
+if( ! class_exists( 'Triphub_Radio_Image_Control' ) ){
 	/**
 	 * Radio Image control (modified radio).
     */
-	class triphub_Radio_Image_Control extends WP_Customize_Control {
+	class Triphub_Radio_Image_Control extends WP_Customize_Control {
 
 		public $type    = 'triphub-radio-image';
 		public $tooltip = '';

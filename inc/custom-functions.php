@@ -164,66 +164,6 @@ if ( ! function_exists( 'triphub_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'triphub_setup' );
 
-if( ! function_exists( 'triphub_admin_notice' ) ) :
-/**
- * Addmin notice for getting started page
-*/
-function triphub_admin_notice(){
-	global $pagenow;
-	$theme_args      = wp_get_theme();
-	$meta            = get_option( 'triphub_admin_notice' );
-	$name            = $theme_args->__get( 'Name' );
-	$current_screen  = get_current_screen();
-	$dismissnonce    = wp_create_nonce( 'triphub_admin_notice' );
-	
-	if( 'themes.php' == $pagenow && !$meta ){
-		
-		if( $current_screen->id !== 'dashboard' && $current_screen->id !== 'themes' ){
-			return;
-		}
-
-		if( is_network_admin() ){
-			return;
-		}
-
-		if( ! current_user_can( 'manage_options' ) ){
-			return;
-		} ?>
-
-		<div class="welcome-message notice notice-info">
-			<div class="notice-wrapper">
-				<div class="notice-text">
-					<h3><?php esc_html_e( 'Congratulations!', 'triphub' ); ?></h3>
-					<p><?php printf( __( '%1$s is now installed and ready to use. Click below to see theme documentation, plugins to install and other details to get started.', 'triphub' ), esc_html( $name ) ); ?></p>
-					<p><a href="<?php echo esc_url( admin_url( 'themes.php?page=triphub-license' ) ); ?>" class="button button-primary"><?php esc_html_e( 'Go to the getting started.', 'triphub' ); ?></a></p>
-					<p class="dismiss-link"><strong><a href="?triphub_admin_notice=1&_wpnonce=<?php echo esc_attr( $dismissnonce ); ?>"><?php esc_html_e( 'Dismiss', 'triphub' ); ?></a></strong></p>
-				</div>
-			</div>
-		</div>
-	<?php }
-}
-endif;
-add_action( 'admin_notices', 'triphub_admin_notice' );
-
-if( ! function_exists( 'triphub_update_admin_notice' ) ) :
-/**
- * Updating admin notice on dismiss
-*/
-function triphub_update_admin_notice(){
-
-	if (!current_user_can('manage_options')) {
-        return;
-    }
-
-     // Bail if the nonce doesn't check out
-     if ( ( isset( $_GET['triphub_admin_notice'] ) && $_GET['triphub_admin_notice'] = '1' ) && wp_verify_nonce( $_GET['_wpnonce'], 'triphub_admin_notice' ) ) {
-        update_option( 'triphub_admin_notice', true );
-    }
-
-}
-endif;
-add_action( 'admin_init', 'triphub_update_admin_notice' );
-
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -292,7 +232,7 @@ function triphub_scripts() {
 	$ed_preload_local_fonts = get_theme_mod( 'ed_preload_local_fonts', $defaults['ed_preload_local_fonts'] );
 
     wp_enqueue_style( 'triphub-google-fonts', triphub_google_fonts_url(), array(), null );
-	wp_enqueue_style( 'triphub-style', get_template_directory_uri() . '/css/build/default.css', array(), triphub_THEME_VERSION );
+	wp_enqueue_style( 'triphub-style', get_template_directory_uri() . '/css/build/default.css', array(), TRIPHUB_THEME_VERSION );
 
 	wp_style_add_data( 'triphub-style', 'rtl', 'replace' );
 	if( $suffix ){
@@ -300,11 +240,11 @@ function triphub_scripts() {
 	}
 
 	if( triphub_is_elementor_activated() ){
-        wp_enqueue_style( 'triphub-elementor', get_template_directory_uri(). '/css' . $build . '/elementor' . $suffix . '.css', array(), triphub_THEME_VERSION );
+        wp_enqueue_style( 'triphub-elementor', get_template_directory_uri(). '/css' . $build . '/elementor' . $suffix . '.css', array(), TRIPHUB_THEME_VERSION );
     }
 
 	if( $pagination === 'load_more' || $pagination === 'infinite_scroll' ){
-		wp_enqueue_script( 'triphub-ajax', get_template_directory_uri() . '/js' . $build . '/ajax' . $suffix . '.js', array('jquery'), triphub_THEME_VERSION, true );
+		wp_enqueue_script( 'triphub-ajax', get_template_directory_uri() . '/js' . $build . '/ajax' . $suffix . '.js', array('jquery'), TRIPHUB_THEME_VERSION, true );
 		wp_localize_script( 
 			'triphub-ajax',
 			'triphub_ajax',
@@ -320,7 +260,7 @@ function triphub_scripts() {
 			) 
 		);	
 	}
-	wp_enqueue_script( 'triphub-custom', get_template_directory_uri() . '/js' . $build . '/custom' . $suffix . '.js', array( 'jquery' ), triphub_THEME_VERSION, true );
+	wp_enqueue_script( 'triphub-custom', get_template_directory_uri() . '/js' . $build . '/custom' . $suffix . '.js', array( 'jquery' ), TRIPHUB_THEME_VERSION, true );
 	
 	wp_localize_script( 
 		'triphub-custom',
@@ -357,8 +297,8 @@ if( ! function_exists( 'triphub_admin_scripts' ) ) :
 function triphub_admin_scripts( $hook ){   
 
 	if( $hook == 'post-new.php' || $hook == 'post.php' || $hook == 'user-new.php' || $hook == 'user-edit.php' || $hook == 'profile.php' || $hook == 'widgets.php' ){
-		wp_enqueue_style( 'triphub-admin', get_template_directory_uri() . '/inc/css/admin.css', '', triphub_THEME_VERSION );
-		wp_enqueue_script( 'triphub-admin', get_template_directory_uri() . '/inc/js/admin.js', array( 'jquery', 'jquery-ui-sortable' ), triphub_THEME_VERSION, false );
+		wp_enqueue_style( 'triphub-admin', get_template_directory_uri() . '/inc/css/admin.css', '', TRIPHUB_THEME_VERSION );
+		wp_enqueue_script( 'triphub-admin', get_template_directory_uri() . '/inc/js/admin.js', array( 'jquery', 'jquery-ui-sortable' ), TRIPHUB_THEME_VERSION, false );
 	}
 }
 endif; 

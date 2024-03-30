@@ -29,7 +29,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'single_post_sidebar_layout_group',
             array(
@@ -52,7 +52,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Radio_Image_Control(
+		new Triphub_Radio_Image_Control(
 			$wp_customize,
 			'post_sidebar_layout',
 			array(
@@ -93,7 +93,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Toggle_Control( 
+		new Triphub_Toggle_Control( 
 			$wp_customize,
 			'ed_crop_single_image',
 			array(
@@ -115,7 +115,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'single_post_meta_settings_group',
             array(
@@ -139,7 +139,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		new triphub_Sortable_Control(
+		new Triphub_Sortable_Control(
 			$wp_customize,
 			'single_post_meta_order',
 			array(
@@ -166,7 +166,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
         );
         
     $wp_customize->add_control(
-        new triphub_Toggle_Control( 
+        new Triphub_Toggle_Control( 
             $wp_customize,
             'ed_author',
             array(
@@ -187,7 +187,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-        new triphub_Toggle_Control( 
+        new Triphub_Toggle_Control( 
             $wp_customize,
             'ed_post_tags',
             array(
@@ -208,7 +208,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-        new triphub_Toggle_Control( 
+        new Triphub_Toggle_Control( 
             $wp_customize,
             'ed_post_pagination',
             array(
@@ -229,7 +229,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'single_related_posts_group',
             array(
@@ -252,7 +252,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Toggle_Control( 
+        new Triphub_Toggle_Control( 
             $wp_customize,
             'ed_post_related',
             array(
@@ -274,7 +274,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     
     
     $wp_customize->add_control(
-        new triphub_Text_Control( 
+        new Triphub_Text_Control( 
             $wp_customize,
 			'single_related_title',
 			array(
@@ -300,7 +300,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Radio_Buttonset_Control(
+		new Triphub_Radio_Buttonset_Control(
 			$wp_customize,
 			'related_taxonomy',
 			array(
@@ -326,7 +326,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'related_post_num',
             array(
@@ -359,7 +359,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'related_post_row',
             array(
@@ -392,7 +392,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Radio_Buttonset_Control(
+		new Triphub_Radio_Buttonset_Control(
 			$wp_customize,
 			'related_posts_location',
 			array(
@@ -417,7 +417,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'single_comments_group',
             array(
@@ -440,7 +440,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Toggle_Control( 
+		new Triphub_Toggle_Control( 
 			$wp_customize,
 			'ed_single_comments',
 			array(
@@ -461,7 +461,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Radio_Buttonset_Control(
+		new Triphub_Radio_Buttonset_Control(
 			$wp_customize,
 			'single_comment_form',
 			array(
@@ -486,7 +486,7 @@ function triphub_customize_register_layout_post( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Radio_Buttonset_Control(
+		new Triphub_Radio_Buttonset_Control(
 			$wp_customize,
 			'single_comment_location',
 			array(

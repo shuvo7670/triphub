@@ -7,7 +7,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-class triphub_Group_Control extends WP_Customize_Control {
+class Triphub_Group_Control extends WP_Customize_Control {
 	/**
      * Lists of variables variable
      */

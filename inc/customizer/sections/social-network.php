@@ -27,7 +27,7 @@ function triphub_customize_register_footer_social_network( $wp_customize ){
     );
     
     $wp_customize->add_control(
-        new triphub_Note_Control( 
+        new Triphub_Note_Control( 
             $wp_customize,
             'social_network_text',
             array(
@@ -48,7 +48,7 @@ function triphub_customize_register_footer_social_network( $wp_customize ){
     );
     
     $wp_customize->add_control(
-		new triphub_Text_Control( 
+		new Triphub_Text_Control( 
 			$wp_customize,
 			'triphub_facebook',
 			array(
@@ -68,7 +68,7 @@ function triphub_customize_register_footer_social_network( $wp_customize ){
     );
     
     $wp_customize->add_control(
-		new triphub_Text_Control( 
+		new Triphub_Text_Control( 
 			$wp_customize,
 			'triphub_twitter',
 			array(
@@ -88,7 +88,7 @@ function triphub_customize_register_footer_social_network( $wp_customize ){
     );
     
     $wp_customize->add_control(
-		new triphub_Text_Control( 
+		new Triphub_Text_Control( 
 			$wp_customize,
 			'triphub_instagram',
 			array(
@@ -108,7 +108,7 @@ function triphub_customize_register_footer_social_network( $wp_customize ){
     );
     
     $wp_customize->add_control(
-		new triphub_Text_Control( 
+		new Triphub_Text_Control( 
 			$wp_customize,
 			'triphub_pinterest',
 			array(
@@ -129,7 +129,7 @@ function triphub_customize_register_footer_social_network( $wp_customize ){
     );
     
     $wp_customize->add_control(
-		new triphub_Text_Control( 
+		new Triphub_Text_Control( 
 			$wp_customize,
 			'triphub_youtube',
 			array(
@@ -150,7 +150,7 @@ function triphub_customize_register_footer_social_network( $wp_customize ){
     );
     
     $wp_customize->add_control(
-		new triphub_Text_Control( 
+		new Triphub_Text_Control( 
 			$wp_customize,
 			'triphub_tiktok',
 			array(
@@ -171,7 +171,7 @@ function triphub_customize_register_footer_social_network( $wp_customize ){
     );
     
     $wp_customize->add_control(
-		new triphub_Text_Control( 
+		new Triphub_Text_Control( 
 			$wp_customize,
 			'triphub_linkedin',
 			array(
@@ -192,7 +192,7 @@ function triphub_customize_register_footer_social_network( $wp_customize ){
     );
     
     $wp_customize->add_control(
-		new triphub_Text_Control( 
+		new Triphub_Text_Control( 
 			$wp_customize,
 			'triphub_whatsapp',
 			array(
@@ -213,7 +213,7 @@ function triphub_customize_register_footer_social_network( $wp_customize ){
     );
     
     $wp_customize->add_control(
-		new triphub_Text_Control( 
+		new Triphub_Text_Control( 
 			$wp_customize,
 			'triphub_viber',
 			array(
@@ -234,7 +234,7 @@ function triphub_customize_register_footer_social_network( $wp_customize ){
     );
     
     $wp_customize->add_control(
-		new triphub_Text_Control( 
+		new Triphub_Text_Control( 
 			$wp_customize,
 			'triphub_telegram',
 			array(
@@ -255,7 +255,7 @@ function triphub_customize_register_footer_social_network( $wp_customize ){
     );
     
     $wp_customize->add_control(
-		new triphub_Text_Control( 
+		new Triphub_Text_Control( 
 			$wp_customize,
 			'triphub_tripadvisor',
 			array(

@@ -29,7 +29,7 @@ function triphub_customize_register_layout_blog( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'blog_page_title_group',
             array(
@@ -54,7 +54,7 @@ function triphub_customize_register_layout_blog( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Toggle_Control( 
+		new Triphub_Toggle_Control( 
 			$wp_customize,
 			'ed_blog_title',
 			array(
@@ -81,7 +81,7 @@ function triphub_customize_register_layout_blog( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Toggle_Control( 
+		new Triphub_Toggle_Control( 
 			$wp_customize,
 			'ed_blog_desc',
 			array(
@@ -108,7 +108,7 @@ function triphub_customize_register_layout_blog( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Radio_Buttonset_Control(
+		new Triphub_Radio_Buttonset_Control(
 			$wp_customize,
 			'blog_alignment',
 			array(
@@ -134,7 +134,7 @@ function triphub_customize_register_layout_blog( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'blog_image_group',
             array(
@@ -158,7 +158,7 @@ function triphub_customize_register_layout_blog( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Toggle_Control( 
+		new Triphub_Toggle_Control( 
 			$wp_customize,
 			'blog_crop_image',
 			array(
@@ -180,7 +180,7 @@ function triphub_customize_register_layout_blog( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'blog_content_group',
             array(
@@ -204,7 +204,7 @@ function triphub_customize_register_layout_blog( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		new triphub_Select_Control(
+		new Triphub_Select_Control(
     		$wp_customize,
     		'blog_content',
     		array(
@@ -229,7 +229,7 @@ function triphub_customize_register_layout_blog( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'excerpt_length',
             array(
@@ -263,7 +263,7 @@ function triphub_customize_register_layout_blog( $wp_customize ) {
 	);
 
 	$wp_customize->add_control(
-		new triphub_Sortable_Control(
+		new Triphub_Sortable_Control(
 			$wp_customize,
 			'blog_meta_order',
 			array(
@@ -289,7 +289,7 @@ function triphub_customize_register_layout_blog( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-        new triphub_Toggle_Control( 
+        new Triphub_Toggle_Control( 
             $wp_customize,
             'blog_ed_category',
             array(
@@ -312,7 +312,7 @@ function triphub_customize_register_layout_blog( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Text_Control( 
+		new Triphub_Text_Control( 
 			$wp_customize,
 			'blog_read_more',
 			array(
@@ -338,7 +338,7 @@ function triphub_customize_register_layout_blog( $wp_customize ) {
     );
 
     $wp_customize->add_control(
-        new triphub_Group_Control( 
+        new Triphub_Group_Control( 
             $wp_customize,
             'blog_page_sidebar_group',
             array(
@@ -361,7 +361,7 @@ function triphub_customize_register_layout_blog( $wp_customize ) {
     );
     
     $wp_customize->add_control(
-		new triphub_Radio_Image_Control(
+		new Triphub_Radio_Image_Control(
 			$wp_customize,
 			'blog_sidebar_layout',
 			array(

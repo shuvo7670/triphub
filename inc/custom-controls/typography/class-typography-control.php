@@ -9,24 +9,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'triphub_Typography_Customize_Control' ) ) {
+if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Triphub_Typography_Customize_Control' ) ) {
 	/**
 	 * Create the typography elements control.
 	 *
 	 * @since 2.0
 	 */
-	class triphub_Typography_Customize_Control extends WP_Customize_Control {
+	class Triphub_Typography_Customize_Control extends WP_Customize_Control {
 
 		public $type = 'triphub-typography';
 		public $group;
 		public $collapsed = true;
 
 		public function enqueue() {
-			wp_enqueue_script( 'triphub-typography-selectWoo', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/selectWoo.min.js', array( 'customize-controls', 'jquery' ), triphub_THEME_VERSION, true );
-			wp_enqueue_style( 'triphub-typography-selectWoo', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/selectWoo.min.css', array(), triphub_THEME_VERSION );
+			wp_enqueue_script( 'triphub-typography-selectWoo', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/selectWoo.min.js', array( 'customize-controls', 'jquery' ), TRIPHUB_THEME_VERSION, true );
+			wp_enqueue_style( 'triphub-typography-selectWoo', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/selectWoo.min.css', array(), TRIPHUB_THEME_VERSION );
 
-			wp_enqueue_script( 'triphub-typography-customizer', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/typography-customizer.js', array( 'customize-controls', 'triphub-typography-selectWoo' ), triphub_THEME_VERSION, true );
-			wp_enqueue_style( 'triphub-typography-customizer', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/typography-customizer.css', array(), triphub_THEME_VERSION );
+			wp_enqueue_script( 'triphub-typography-customizer', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/typography-customizer.js', array( 'customize-controls', 'triphub-typography-selectWoo' ), TRIPHUB_THEME_VERSION, true );
+			wp_enqueue_style( 'triphub-typography-customizer', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/typography-customizer.css', array(), TRIPHUB_THEME_VERSION );
 		}
 
 		public function to_json() {

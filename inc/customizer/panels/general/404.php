@@ -50,7 +50,7 @@ function triphub_customize_register_general_404_page( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Toggle_Control( 
+        new Triphub_Toggle_Control( 
             $wp_customize,
             'ed_latest_post',
             array(
@@ -70,7 +70,7 @@ function triphub_customize_register_general_404_page( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'no_of_posts_404',
             array(
@@ -101,7 +101,7 @@ function triphub_customize_register_general_404_page( $wp_customize ){
     );
 
     $wp_customize->add_control(
-        new triphub_Range_Slider_Control(
+        new Triphub_Range_Slider_Control(
             $wp_customize,
             'posts_per_row_404',
             array(

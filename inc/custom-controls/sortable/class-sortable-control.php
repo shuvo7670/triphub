@@ -10,11 +10,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if( ! class_exists( 'triphub_Sortable_Control' ) ){
+if( ! class_exists( 'Triphub_Sortable_Control' ) ){
     /**
      * Sortable control (uses checkboxes).
      */
-    class triphub_Sortable_Control extends WP_Customize_Control {
+    class Triphub_Sortable_Control extends WP_Customize_Control {
     
     	public $type = 'triphub-sortable';
         

@@ -2,8 +2,8 @@
 // No direct access, please
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-if ( ! class_exists( 'triphub_Alpha_Color_Customize_Control' ) ) :
-class triphub_Alpha_Color_Customize_Control extends WP_Customize_Control {
+if ( ! class_exists( 'Triphub_Alpha_Color_Customize_Control' ) ) :
+class Triphub_Alpha_Color_Customize_Control extends WP_Customize_Control {
 	/**
 	 * Official control name.
 	 */
@@ -34,14 +34,14 @@ class triphub_Alpha_Color_Customize_Control extends WP_Customize_Control {
 			'triphub-color-alpha-picker',
 			trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/coloralpha/color-alpha-picker.js',
 			array( 'jquery', 'wp-color-picker' ),
-			triphub_THEME_VERSION,
+			TRIPHUB_THEME_VERSION,
 			true
 		);
 		wp_enqueue_style(
 			'triphub-color-alpha-picker',
 			trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/coloralpha/color-alpha-picker.css',
 			array( 'wp-color-picker' ),
-			triphub_THEME_VERSION
+			TRIPHUB_THEME_VERSION
 		);
 	}
 
