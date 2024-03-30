@@ -223,7 +223,7 @@ function triphub_content_start(){
 		$container_layout = ( $archive_layout === 'default' ) ? $container_layout : $archive_layout;
 	}
 
-	$class  = ( $container_layout == 'full_width_stretched' && !is_404() ) ? 'container-full' : 'container'; 
+	$class  = ( $container_layout == 'full_width_stretched' && !is_404() ) ? 'container-full' : 'page-wrapper'; 
 
 	if( is_singular('post') && $single_post_layout === 'two' ){
 		
@@ -275,7 +275,7 @@ function triphub_content_start(){
 	if( !is_404() ) { ?>
 		<div class="site-content">		
 			<div class="<?php echo esc_attr( $class ); ?>">
-				<div class="main-content-wrapper clear">
+				<div class="main-content-wrapper">
 					 <?php triphub_archive_tax_description(); ?>
 				
 	<?php	

@@ -1,12 +1,6 @@
 (function ($) {
   "use strict";
 
-  // Preloader
-	$(window).on('load', function () {
-		$("#shikor_preloader").delay(500).fadeOut(300);
-		$("#shikor_preloader").delay(500).fadeOut(300);
-	})
-
   // Offcanvas menu
   $(".header-btn").on("click", function () {
     $(".extra-info,.offcanvas-overlay").addClass("active");

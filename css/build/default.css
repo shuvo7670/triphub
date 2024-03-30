@@ -863,19 +863,6 @@ Common Site Style
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-/***** Site Content Section ******/
-.main-content-wrapper {
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 72px 0;
-}
 
 #primary {
   width: calc(100% - var(--triphub-sidebar-width));
@@ -3285,7 +3272,7 @@ body.wpte-cc-sticky-converter .header-t-currnc #wte-cc-currency-list-container .
 }
 .header-layout-1 .header-b {
   background: var(--white-color);
-  padding: 25px 0;
+  padding: 10px 0;
   position: relative;
   box-shadow: 0px 4px 4px rgba(28, 32, 17, 0.02), 0px 4px 40px rgba(28, 32, 17, 0.04);
 }

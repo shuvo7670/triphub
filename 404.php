@@ -14,7 +14,7 @@ get_header();
 ?>
 <div class="site-content">
 	<div class="fourofour-main-wrap"<?php echo ( $bg_style ); ?>>
-		<div class="main-content-wrapper clear">
+		<div class="main-content-wrapper">
 			<div class="container">
 				<div class="error-content">
 					<h2 class="error-title"><?php esc_html_e( '404', 'triphub' ); ?></h2>
