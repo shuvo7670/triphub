@@ -139,7 +139,7 @@ function triphub_customize_register_layout_blog_archive( $wp_customize ) {
 	);
 
     $wp_customize->selective_refresh->add_partial( 'ed_archive_post_count', array(
-        'selector'        => '.archive .page-header-wrap .travel-monster-search-count',
+        'selector'        => '.archive .page-header-wrap .triphub-search-count',
         'render_callback' => 'triphub_get_ed_archive_post_count',
     ) );
 

@@ -9,7 +9,7 @@
 
 get_header(); ?>	
 	<main id="primary" class="site-main">
-		<div class="travel-monster-container-wrap">
+		<div class="triphub-container-wrap">
 			<?php 
 				/**
 				 * TripHub After Container Wrap

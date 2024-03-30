@@ -41,8 +41,8 @@ class triphub_Group_Control extends WP_Customize_Control {
     }
 
     public function enqueue() {            
-        wp_enqueue_style( 'travel-monster-group', get_template_directory_uri() . '/inc/custom-controls/group/group.css', null );
-        wp_enqueue_script( 'travel-monster-group', get_template_directory_uri() . '/inc/custom-controls/group/group.js', array( 'jquery' ), false, true ); //for group        
+        wp_enqueue_style( 'triphub-group', get_template_directory_uri() . '/inc/custom-controls/group/group.css', null );
+        wp_enqueue_script( 'triphub-group', get_template_directory_uri() . '/inc/custom-controls/group/group.js', array( 'jquery' ), false, true ); //for group        
     }
 
 	public function content_template()

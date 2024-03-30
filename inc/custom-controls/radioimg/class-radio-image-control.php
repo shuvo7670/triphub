@@ -16,7 +16,7 @@ if( ! class_exists( 'triphub_Radio_Image_Control' ) ){
     */
 	class triphub_Radio_Image_Control extends WP_Customize_Control {
 
-		public $type    = 'travel-monster-radio-image';
+		public $type    = 'triphub-radio-image';
 		public $tooltip = '';
 		public $col     = 'col-2';
 		public $svg     = false;
@@ -55,8 +55,8 @@ if( ! class_exists( 'triphub_Radio_Image_Control' ) ){
 		}
         
         public function enqueue() {            
-            wp_enqueue_style( 'travel-monster-radio-image', get_template_directory_uri() . '/inc/custom-controls/radioimg/radio-image.css', null );
-            wp_enqueue_script( 'travel-monster-radio-image', get_template_directory_uri() . '/inc/custom-controls/radioimg/radio-image.js', array( 'jquery' ), false, true ); //for radio-image                
+            wp_enqueue_style( 'triphub-radio-image', get_template_directory_uri() . '/inc/custom-controls/radioimg/radio-image.css', null );
+            wp_enqueue_script( 'triphub-radio-image', get_template_directory_uri() . '/inc/custom-controls/radioimg/radio-image.js', array( 'jquery' ), false, true ); //for radio-image                
         }
 
 		protected function content_template() {

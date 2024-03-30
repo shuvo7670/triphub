@@ -7,7 +7,7 @@ class triphub_Alpha_Color_Customize_Control extends WP_Customize_Control {
 	/**
 	 * Official control name.
 	 */
-	public $type = 'travel-monster-color-alpha';
+	public $type = 'triphub-color-alpha';
 	/**
 	 * Add support for palettes to be passed in.
 	 *
@@ -31,14 +31,14 @@ class triphub_Alpha_Color_Customize_Control extends WP_Customize_Control {
 	
 	public function enqueue() {
 		wp_enqueue_script(
-			'travel-monster-color-alpha-picker',
+			'triphub-color-alpha-picker',
 			trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/coloralpha/color-alpha-picker.js',
 			array( 'jquery', 'wp-color-picker' ),
 			triphub_THEME_VERSION,
 			true
 		);
 		wp_enqueue_style(
-			'travel-monster-color-alpha-picker',
+			'triphub-color-alpha-picker',
 			trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/coloralpha/color-alpha-picker.css',
 			array( 'wp-color-picker' ),
 			triphub_THEME_VERSION
@@ -76,7 +76,7 @@ class triphub_Alpha_Color_Customize_Control extends WP_Customize_Control {
 			<# if ( data.label && '' !== data.label ) { #>
 				<span class="customize-control-title">{{ data.label }}</span>
 			<# } #>
-			<input class="travel-monster-color-alpha-control" type="text" data-palette="{{{ data.palette }}}" data-default-color="{{ data.defaultValue }}" {{{ data.link }}} />
+			<input class="triphub-color-alpha-control" type="text" data-palette="{{{ data.palette }}}" data-default-color="{{ data.defaultValue }}" {{{ data.link }}} />
 		</div>
 		<?php
 	}

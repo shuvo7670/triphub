@@ -123,7 +123,7 @@ class triphub_Customizer_Notice {
 	 */
 	public function scripts_for_customizer() {
 
-		wp_enqueue_style( 'travel-monster-customizer-notice', get_template_directory_uri() . '/inc/customizer-plugin-recommend/customizer-notice/css/customizer-notice.css', null );
+		wp_enqueue_style( 'triphub-customizer-notice', get_template_directory_uri() . '/inc/customizer-plugin-recommend/customizer-notice/css/customizer-notice.css', null );
 
 		wp_enqueue_style( 'plugin-install' );
 		wp_enqueue_script( 'plugin-install' );
@@ -131,9 +131,9 @@ class triphub_Customizer_Notice {
 
 		wp_enqueue_script( 'updates' );
 
-		wp_enqueue_script( 'travel-monster-customizer-notice', get_template_directory_uri() . '/inc/customizer-plugin-recommend/customizer-notice/js/customizer-notice.js', array( 'jquery', 'customize-controls' ), triphub_THEME_VERSION, true );
+		wp_enqueue_script( 'triphub-customizer-notice', get_template_directory_uri() . '/inc/customizer-plugin-recommend/customizer-notice/js/customizer-notice.js', array( 'jquery', 'customize-controls' ), triphub_THEME_VERSION, true );
 		wp_localize_script(
-			'travel-monster-customizer-notice', 
+			'triphub-customizer-notice', 
             'customizer_notice_data', 
             array(
 				'ajaxurl'            => admin_url( 'admin-ajax.php' ),

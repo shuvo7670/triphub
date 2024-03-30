@@ -155,7 +155,7 @@ function triphub_content_start(){
 					if( is_archive() ){
 						if( is_author() ){
 							if( get_the_author_meta( 'description' ) ){ ?>
-								<section class="travel-monster-author-box">
+								<section class="triphub-author-box">
 									<div class="author-section">
 										<div class="author-top-wrap">
 											<div class="img-holder">
@@ -182,7 +182,7 @@ function triphub_content_start(){
 
 					if( is_search() ){ ?>
 						<section class="search-result-wrapper">
-							<div class="travel-monster-searchres-inner">
+							<div class="triphub-searchres-inner">
 								<?php get_search_form(); ?>
 							</div>
 						</section>
@@ -194,7 +194,7 @@ function triphub_content_start(){
 					if( ( $archive_count && ( is_category() || is_tag() || is_author() ) )
 						|| is_search() 
 					) {
-						echo '<section class="travel-monster-search-count">';
+						echo '<section class="triphub-search-count">';
 						triphub_search_post_count();
 						echo '</section>';
 					}
@@ -228,7 +228,7 @@ function triphub_content_start(){
 	if( is_singular('post') && $single_post_layout === 'two' ){
 		
 		$post_crop_img  = get_theme_mod( 'ed_crop_single_image', $defaults[ 'ed_crop_single_image' ] );
-		$image_size 	= ( ! $post_crop_img ) ? 'full' : 'travel-monster-single-layout-two'; ?>
+		$image_size 	= ( ! $post_crop_img ) ? 'full' : 'triphub-single-layout-two'; ?>
 		<div class="banner-wrapper">
 			<?php if( has_post_thumbnail() ){
 				echo '<div class="post-thumbnail">'; 
@@ -377,7 +377,7 @@ function triphub_post_thumbnail() {
 	if( ( is_singular('post') && ! $post_crop_img ) ){
 		$image_size = 'full';
 	}else{
-		$image_size = $sidebar ? 'travel-monster-withsidebar' : 'travel-monster-fullwidth';
+		$image_size = $sidebar ? 'triphub-withsidebar' : 'triphub-fullwidth';
 	}
 
 	if( is_singular('post') && $single_post_layout === 'one' ){
@@ -416,7 +416,7 @@ function triphub_post_thumbnail() {
 			}
 		}
 	}elseif( is_singular('trip') ){
-		$image_size = 'travel-monster-single-layout-two';
+		$image_size = 'triphub-single-layout-two';
 		if( has_post_thumbnail() ){
 			echo '<div class="post-thumbnail">';
 			the_post_thumbnail( $image_size, array( 'itemprop' => 'image' ) );
@@ -559,7 +559,7 @@ function triphub_entry_footer() {
 	$ed_social_sharing = get_theme_mod( 'ed_social_sharing', $defaults['ed_social_sharing'] );
 
 	if( ! is_singular() ){
-		echo '<footer class="entry-footer travel-monster-flex">';
+		echo '<footer class="entry-footer triphub-flex">';
 			$read_more      = get_theme_mod( 'blog_read_more', $defaults['blog_read_more'] );
 			$readmore_style = get_theme_mod( 'read_more_style', $defaults['read_more_style'] );
 			$class          = ( $readmore_style == 'button' ) ? ' button-style' : '';
@@ -750,17 +750,17 @@ function triphub_footer_top(){
 					
 	if( $active_sidebars ){ ?>
 		<div class="footer-wrap-main">
-			<div class="travel-monster-footer-adjs">
+			<div class="triphub-footer-adjs">
 				<div class="container">
-					<div class="travel-monster-flex travel-monster-col-<?php echo esc_attr( $col ); ?>">
+					<div class="triphub-flex triphub-col-<?php echo esc_attr( $col ); ?>">
 						<?php foreach( $active_sidebars as $active ){ ?>
-							<div class="travel-monster-foot-main-col">
+							<div class="triphub-foot-main-col">
 								<?php dynamic_sidebar( $active ); ?>	
 							</div>
 						<?php } ?>
 					</div>
 				</div><!-- .container -->
-			</div><!-- .travel-monster-footer-adjs -->
+			</div><!-- .triphub-footer-adjs -->
 		</div><!-- .footer-wrap-main -->
 		<?php 
 	}

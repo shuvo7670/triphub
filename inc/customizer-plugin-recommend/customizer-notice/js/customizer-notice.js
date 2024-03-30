@@ -34,7 +34,7 @@ jQuery(document).ready(function ($) {
                 var container = $('#' + data).parent().parent();
                 container.slideToggle().remove();
 
-                if ($('.recomended-actions_container > .travel-monster-recommended-plugins').length === 0) {
+                if ($('.recomended-actions_container > .triphub-recommended-plugins').length === 0) {
                     $('.control-section-customizer-plugin-notice-section').remove();
                 }
             },

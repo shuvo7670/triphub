@@ -61,7 +61,7 @@ function triphub_customize_register_seo_setting( $wp_customize ){
     );
 
     $wp_customize->selective_refresh->add_partial( 'home_text', array(
-        'selector'        => '.travel-monster-breadcrumbs .home-text',
+        'selector'        => '.triphub-breadcrumbs .home-text',
         'render_callback' => 'triphub_get_home_text',
     ) );
 

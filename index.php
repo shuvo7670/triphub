@@ -22,7 +22,7 @@ get_header(); ?>
 			do_action( 'triphub_before_posts_content' );
         ?>
 
-		<div class="travel-monster-container-wrap">
+		<div class="triphub-container-wrap">
 			<?php 
 				/**
 				 * TripHub After Container Wrap

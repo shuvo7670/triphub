@@ -272,7 +272,7 @@ if (!function_exists('triphub_primary_navigation')):
         $data_stretch = $menu_stretch ? 'data-stretch=yes' : 'data-stretch=no';
         $header_layout = get_theme_mod('header_layout', $defaults['header_layout']);
         if (has_nav_menu('primary') || current_user_can('manage_options')) { ?>
-			<div class="travel-monster-nav-wrapper">
+			<div class="triphub-nav-wrapper">
 				<nav id="site-navigation" class="primary-navigation" <?php triphub_microdata('navigation'); ?> <?php echo esc_attr($data_stretch); ?>>
 					<?php
                         wp_nav_menu(array(
@@ -285,7 +285,7 @@ if (!function_exists('triphub_primary_navigation')):
                     ?>
 				</nav><!-- #site-navigation -->
 				<?php if ($header_layout === 'one' && !wp_is_mobile()) triphub_header_search(); ?>
-			</div><!-- .travel-monster-nav-wrapper -->
+			</div><!-- .triphub-nav-wrapper -->
 		<?php
         }
     }
@@ -315,7 +315,7 @@ if (!function_exists('triphub_secondary_navigation')):
             if ($header === 'two' || $header === 'three' || $header === 'four') return;
         }
         if (has_nav_menu('secondary') || current_user_can('manage_options')) { ?>
-			<div class="travel-monster-nav-wrapper">
+			<div class="triphub-nav-wrapper">
 				<nav id="site-navigation" class="secondary-navigation" <?php triphub_microdata('navigation'); ?>>
 					<?php
             wp_nav_menu(array(
@@ -327,7 +327,7 @@ if (!function_exists('triphub_secondary_navigation')):
             ));
             ?>
 				</nav><!-- #site-navigation -->
-			</div><!-- .travel-monster-nav-wrapper -->
+			</div><!-- .triphub-nav-wrapper -->
 		<?php
         }
     }
@@ -497,7 +497,7 @@ if (!function_exists('triphub_page_header_banner')):
             echo ' style="background-image: url(' . esc_url($img_atts[0]) . ')" data-bg-image="yes"';
         }
         else if (is_home()) {
-            $bg_img = wp_get_attachment_image_url($blog_image, 'travel-monster-header-bg-img');
+            $bg_img = wp_get_attachment_image_url($blog_image, 'triphub-header-bg-img');
             if ($bg_img) echo ' style="background-image: url(' . esc_url($bg_img) . ')" data-bg-image="yes"';
         }
         else if ((is_archive() || is_search()) && isset($archive_image) || is_page_template(array(
@@ -507,7 +507,7 @@ if (!function_exists('triphub_page_header_banner')):
             'templates/review.php',
             'templates/template-trip-listing.php'
         ))) {
-            $bg_img = wp_get_attachment_image_url($archive_image, 'travel-monster-header-bg-img');
+            $bg_img = wp_get_attachment_image_url($archive_image, 'triphub-header-bg-img');
 
             if (is_page_template(array(
                 'templates/template-destination.php',
@@ -517,7 +517,7 @@ if (!function_exists('triphub_page_header_banner')):
                 'templates/template-trip-listing.php'
             ))) {
                 if (has_post_thumbnail(get_the_ID())) {
-                    $bg_img = get_the_post_thumbnail_url(get_the_ID() , 'travel-monster-header-bg-img');
+                    $bg_img = get_the_post_thumbnail_url(get_the_ID() , 'triphub-header-bg-img');
                 }
             }
 
@@ -653,8 +653,8 @@ if (!function_exists('triphub_breadcrumb')):
         //settings from the theme
         if (!is_front_page()) {
             $depth = 1; ?>
-					<div id="crumbs" class="travel-monster-breadcrumb-main-wrap<?php echo esc_attr($trip_class); ?>" itemscope itemtype="http://schema.org/BreadcrumbList">
-						<div class="travel-monster-breadcrumbs">
+					<div id="crumbs" class="triphub-breadcrumb-main-wrap<?php echo esc_attr($trip_class); ?>" itemscope itemtype="http://schema.org/BreadcrumbList">
+						<div class="triphub-breadcrumbs">
 							<?php echo '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 					<a href="' . esc_url(home_url()) . '" itemprop="item"><span itemprop="name" class="home-text">' . esc_html($home_text) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $delimiter . '</span>';
 
@@ -960,7 +960,7 @@ if (!function_exists('triphub_get_posts_list')):
                 $class = 'latest-post';
                 $post_per_row = get_theme_mod('posts_per_row_404', $defaults['posts_per_row_404']);
                 $title = __('Latest Posts', 'triphub');
-                $image_size = 'travel-monster-latest-post';
+                $image_size = 'triphub-latest-post';
             break;
 
             case 'related':
@@ -973,7 +973,7 @@ if (!function_exists('triphub_get_posts_list')):
                 $post_per_row = get_theme_mod('related_post_row', $defaults['related_post_row']);
                 $title = get_theme_mod('single_related_title', $defaults['single_related_title']);
                 $related_tax = get_theme_mod('related_taxonomy', 'cat');
-                $image_size = 'travel-monster-latest-post';
+                $image_size = 'triphub-latest-post';
 
                 if ($related_tax == 'cat') {
                     $cats = get_the_category($post->ID);
@@ -1153,16 +1153,16 @@ if (!function_exists('triphub_blog_layout_image_size')):
         $sidebar = triphub_sidebar();
 
         if ($blog_layout == 'one') {
-            $image_size = ($sidebar) ? 'travel-monster-withsidebar' : 'travel-monster-fullwidth';
+            $image_size = ($sidebar) ? 'triphub-withsidebar' : 'triphub-fullwidth';
         }
         elseif ($blog_layout == 'two') {
-            $image_size = 'travel-monster-blog-list';
+            $image_size = 'triphub-blog-list';
         }
         elseif ($blog_layout == 'three') {
-            $image_size = ($sidebar) ? 'travel-monster-blog-grid' : 'travel-monster-fullwidth';
+            $image_size = ($sidebar) ? 'triphub-blog-grid' : 'triphub-fullwidth';
         }
         else {
-            $image_size = 'travel-monster-withsidebar';
+            $image_size = 'triphub-withsidebar';
         }
 
         if (!$crop_img) $image_size = 'full';
@@ -1181,16 +1181,16 @@ if (!function_exists('triphub_archive_layout_image_size')):
         $sidebar = triphub_sidebar();
 
         if ($archive_layout == 'one') {
-            $image_size = ($sidebar) ? 'travel-monster-withsidebar' : 'travel-monster-fullwidth';
+            $image_size = ($sidebar) ? 'triphub-withsidebar' : 'triphub-fullwidth';
         }
         elseif ($archive_layout == 'two') {
-            $image_size = 'travel-monster-blog-list';
+            $image_size = 'triphub-blog-list';
         }
         elseif ($archive_layout == 'three') {
-            $image_size = ($sidebar) ? 'travel-monster-blog-grid' : 'travel-monster-fullwidth';
+            $image_size = ($sidebar) ? 'triphub-blog-grid' : 'triphub-fullwidth';
         }
         else {
-            $image_size = 'travel-monster-withsidebar';
+            $image_size = 'triphub-withsidebar';
         }
 
         return $image_size;
@@ -1532,7 +1532,7 @@ triphub_demo_importer_checked();
  */
 if ( ! triphub_pro_is_activated() ) {
     add_filter( 'demo_importer_plus_get_pro_text', function() { return __( 'Get TripHub Pro', 'triphub' ); } );
-    add_filter( 'demo_importer_plus_get_pro_url', function() { return esc_url('https://wptravelengine.com/wordpress-travel-themes/travel-monster-pro/'); } );
+    add_filter( 'demo_importer_plus_get_pro_url', function() { return esc_url('https://wptravelengine.com/wordpress-travel-themes/triphub-pro/'); } );
 } else {
     add_filter( 'demo_importer_plus_get_pro_text', '__return_false' );
     add_filter( 'demo_importer_plus_get_pro_url', '__return_false' );

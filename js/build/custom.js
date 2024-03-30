@@ -555,9 +555,9 @@ function travelMonsterFindParents(target, query) {
 
     //Masonry Layout
     if ((triphub_custom.bp_layout == 'masonry_grid') && ($('.blog').length > 0 || $('.search').length > 0 || $('.archive').length > 0)) {
-        $('.travel-monster-container-wrap').imagesLoaded(function () {
-            $('.travel-monster-container-wrap').masonry({
-                itemSelector: '.travel-monster-post',
+        $('.triphub-container-wrap').imagesLoaded(function () {
+            $('.triphub-container-wrap').masonry({
+                itemSelector: '.triphub-post',
                 isOriginLeft: mrtl
             });
         });
@@ -566,14 +566,14 @@ function travelMonsterFindParents(target, query) {
     //alignfull js
     $(window).on('load resize', function () {
         var gbWindowWidth = $(window).width();
-        var gbContainerWidth = $('.travel-monster-has-blocks .site-content > .container').width();
-        var gbContentWidth = $('.travel-monster-has-blocks .site-main .entry-content').width();
+        var gbContainerWidth = $('.triphub-has-blocks .site-content > .container').width();
+        var gbContentWidth = $('.triphub-has-blocks .site-main .entry-content').width();
         var gbMarginFull = (parseInt(gbContentWidth) - parseInt(gbWindowWidth)) / 2;
         var gbMarginFull2 = (parseInt(gbContentWidth) - parseInt(gbContainerWidth)) / 2;
         var gbMarginCenter = (parseInt(gbContentWidth) - parseInt(gbWindowWidth)) / 2;
-        $(".travel-monster-has-blocks.full-width .site-main .entry-content .alignfull").css({ "max-width": gbWindowWidth, "width": gbWindowWidth, "margin-left": gbMarginFull });
-        $(".travel-monster-has-blocks.full-width .site-main .entry-content .alignfull").css({ "max-width": gbWindowWidth, "width": gbWindowWidth, "margin-left": gbMarginCenter });
-        $(".travel-monster-has-blocks.full-width .site-main .entry-content .alignwide").css({ "max-width": gbContainerWidth, "width": gbContainerWidth, "margin-left": gbMarginFull2 });
+        $(".triphub-has-blocks.full-width .site-main .entry-content .alignfull").css({ "max-width": gbWindowWidth, "width": gbWindowWidth, "margin-left": gbMarginFull });
+        $(".triphub-has-blocks.full-width .site-main .entry-content .alignfull").css({ "max-width": gbWindowWidth, "width": gbWindowWidth, "margin-left": gbMarginCenter });
+        $(".triphub-has-blocks.full-width .site-main .entry-content .alignwide").css({ "max-width": gbContainerWidth, "width": gbContainerWidth, "margin-left": gbMarginFull2 });
     });
 
     /** Lightbox */

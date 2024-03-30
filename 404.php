@@ -8,7 +8,7 @@
  */
 $defaults    = triphub_get_general_defaults();
 $error_image = get_theme_mod( '404_image', $defaults['404_image'] );
-$bg_img      = wp_get_attachment_image_url( $error_image,'travel-monster-single-layout-two' );
+$bg_img      = wp_get_attachment_image_url( $error_image,'triphub-single-layout-two' );
 $bg_style 	 = (!empty( $error_image ) ) ? 'style="background-image: url(' . esc_url( $bg_img ) . '); background-position: cover;"' : '';
 get_header();
 ?>

@@ -17,16 +17,16 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'triphub_Typograp
 	 */
 	class triphub_Typography_Customize_Control extends WP_Customize_Control {
 
-		public $type = 'travel-monster-typography';
+		public $type = 'triphub-typography';
 		public $group;
 		public $collapsed = true;
 
 		public function enqueue() {
-			wp_enqueue_script( 'travel-monster-typography-selectWoo', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/selectWoo.min.js', array( 'customize-controls', 'jquery' ), triphub_THEME_VERSION, true );
-			wp_enqueue_style( 'travel-monster-typography-selectWoo', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/selectWoo.min.css', array(), triphub_THEME_VERSION );
+			wp_enqueue_script( 'triphub-typography-selectWoo', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/selectWoo.min.js', array( 'customize-controls', 'jquery' ), triphub_THEME_VERSION, true );
+			wp_enqueue_style( 'triphub-typography-selectWoo', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/selectWoo.min.css', array(), triphub_THEME_VERSION );
 
-			wp_enqueue_script( 'travel-monster-typography-customizer', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/typography-customizer.js', array( 'customize-controls', 'travel-monster-typography-selectWoo' ), triphub_THEME_VERSION, true );
-			wp_enqueue_style( 'travel-monster-typography-customizer', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/typography-customizer.css', array(), triphub_THEME_VERSION );
+			wp_enqueue_script( 'triphub-typography-customizer', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/typography-customizer.js', array( 'customize-controls', 'triphub-typography-selectWoo' ), triphub_THEME_VERSION, true );
+			wp_enqueue_style( 'triphub-typography-customizer', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/typography/typography-customizer.css', array(), triphub_THEME_VERSION );
 		}
 
 		public function to_json() {
@@ -68,7 +68,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'triphub_Typograp
 					<span class="customize-control-title">{{ data.label }}</span>
 				<# } #>
 				<# if ( 'undefined' !== typeof ( data.family ) ) { #>
-					<div class="travel-monster-font-family">
+					<div class="triphub-font-family">
 						<label>
 							<# if ( '' !== data.family_title ) { #>
 								<p class="description">{{ data.family_title }}</p>
@@ -103,7 +103,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'triphub_Typograp
 						data.variant.value = data.variant.default;
 					}
 					#>
-					<div id={{{ data.variant.id }}} class="travel-monster-font-variant" data-saved-value="{{ data.variant.value }}">
+					<div id={{{ data.variant.id }}} class="triphub-font-variant" data-saved-value="{{ data.variant.value }}">
 						<label>
 							<# if ( '' !== data.variant_title ) { #>
 								<p class="description">{{ data.variant_title }}</p>
@@ -119,7 +119,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'triphub_Typograp
 				<# } #>
 
 				<# if ( 'undefined' !== typeof ( data.category ) ) { #>
-					<div class="travel-monster-font-category">
+					<div class="triphub-font-category">
 						<label>
 							<# if ( '' !== data.category_title ) { #>
 								<p class="description">{{ data.category_title }}</p>
@@ -129,9 +129,9 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'triphub_Typograp
 					</div>
 				<# } #>
 
-				<div class="travel-monster-weight-transform-wrapper">
+				<div class="triphub-weight-transform-wrapper">
 					<# if ( 'undefined' !== typeof ( data.weight ) ) { #>
-						<div class="travel-monster-font-weight">
+						<div class="triphub-font-weight">
 							<label>
 								<# if ( '' !== data.weight_title ) { #>
 									<p class="description">{{ data.weight_title }}</p>
@@ -150,7 +150,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'triphub_Typograp
 					<# } #>
 
 					<# if ( 'undefined' !== typeof ( data.transform ) ) { #>
-						<div class="travel-monster-font-transform">
+						<div class="triphub-font-transform">
 							<label>
 								<# if ( '' !== data.transform_title ) { #>
 									<p class="description">{{ data.transform_title }}</p>

@@ -17,7 +17,7 @@ $ed_page_comments = get_theme_mod( 'ed_page_comments', $defaults['ed_page_commen
 get_header(); ?>
 
 	<main id="primary" class="site-main">
-		<div class="travel-monster-container-wrap">
+		<div class="triphub-container-wrap">
 			<?php 
 				/**
 				 * TripHub After Container Wrap

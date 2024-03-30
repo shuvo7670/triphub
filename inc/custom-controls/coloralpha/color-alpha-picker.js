@@ -98,7 +98,7 @@ function triphub_update_alpha_value_on_alpha_slider( alpha, $alphaSlider ) {
 jQuery( document ).ready( function( $ ) {
 
 	// Loop over each control and transform it into our color picker.
-	$( '.travel-monster-color-alpha-control' ).each( function() {
+	$( '.triphub-color-alpha-control' ).each( function() {
 
 		// Scope the vars.
 		var $control, startingColor, paletteInput, showOpacity, defaultColor, palette,
@@ -143,7 +143,7 @@ jQuery( document ).ready( function( $ ) {
 				$transparency = $container.find( '.transparency' );
 
 				// Always show the background color of the opacity slider at 100% opacity.
-				$alphaSlider.closest( '.travel-monster-color-alpha-picker-container' ).css( 'background-color', ui.color.toString( 'no-alpha' ) );
+				$alphaSlider.closest( '.triphub-color-alpha-picker-container' ).css( 'background-color', ui.color.toString( 'no-alpha' ) );
 			},
 			palettes: palette
 		};
@@ -154,7 +154,7 @@ jQuery( document ).ready( function( $ ) {
 		$container = $control.parents( '.wp-picker-container:first' );
 
 		// Insert our opacity slider.
-		$( '<div class="travel-monster-color-alpha-picker-container iris-slider iris-strip">' +
+		$( '<div class="triphub-color-alpha-picker-container iris-slider iris-strip">' +
 				'<div class="alpha-slider iris-slider-offset"></div>' +
 			'</div>' ).appendTo( $container.find( '.iris-picker-inner' ) );
 
@@ -266,12 +266,12 @@ jQuery( document ).ready( function( $ ) {
 
 // Move the opacity bar next to the hue bar
 jQuery( document ).ready( function( $ ) {
-	var container_width = $( '.customize-control-travel-monster-color-alpha .iris-picker' ).width();
-	var square_width = $( '.customize-control-travel-monster-color-alpha .iris-square' ).width();
+	var container_width = $( '.customize-control-triphub-color-alpha .iris-picker' ).width();
+	var square_width = $( '.customize-control-triphub-color-alpha .iris-square' ).width();
 	var available_space = container_width - square_width;
 	var strip_width = ( available_space / 2 ) - 20;
-	var strip_height = $( '.customize-control-travel-monster-color-alpha .iris-strip' ).height();
-	$( '.customize-control-travel-monster-color-alpha .iris-strip, .travel-monster-color-alpha-picker-container' ).css( 'width', strip_width + 'px' );
-	$( '.travel-monster-color-alpha-picker-container' ).css( 'height', strip_height + 'px' );
+	var strip_height = $( '.customize-control-triphub-color-alpha .iris-strip' ).height();
+	$( '.customize-control-triphub-color-alpha .iris-strip, .triphub-color-alpha-picker-container' ).css( 'width', strip_width + 'px' );
+	$( '.triphub-color-alpha-picker-container' ).css( 'height', strip_height + 'px' );
 	
 });

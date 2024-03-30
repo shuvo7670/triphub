@@ -14,7 +14,7 @@ class triphub_Group_Title extends WP_Customize_Section {
 	 *
 	 * @var string
 	 */
-	public $type = 'travel-monster-group-title';
+	public $type = 'triphub-group-title';
 
 	/**
 	 * Special categorization for the section.
@@ -30,7 +30,7 @@ class triphub_Group_Title extends WP_Customize_Section {
 	public function render() {
 		$description = $this->description;
 		?>
-		<li id="accordion-section-<?php echo esc_attr( $this->id ); ?>" class="accordion-section travel-monster-group-title">
+		<li id="accordion-section-<?php echo esc_attr( $this->id ); ?>" class="accordion-section triphub-group-title">
 			<h3><?php echo esc_html( $this->title ); ?></h3>
 			<?php if ( ! empty( $description ) ) { ?>
 				<span class="description"><?php echo esc_html( $description ); ?></span>

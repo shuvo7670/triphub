@@ -1,4 +1,4 @@
-wp.customize.controlConstructor['travel-monster-sortable'] = wp.customize.Control.extend({
+wp.customize.controlConstructor['triphub-sortable'] = wp.customize.Control.extend({
 
 	ready: function() {
 

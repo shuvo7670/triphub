@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 if ( ! function_exists( 'triphub_Spacing_Control' ) ) :
 class triphub_Spacing_Control extends WP_Customize_Control {
 
-	public $type = 'travel-monster-spacing';
+	public $type = 'triphub-spacing';
 
 	public $l10n = array();
 
@@ -19,8 +19,8 @@ class triphub_Spacing_Control extends WP_Customize_Control {
 	}
 
 	public function enqueue() {
-		wp_enqueue_script( 'travel-monster-spacing-customizer', trailingslashit( get_template_directory_uri() )  . 'inc/custom-controls/spacing/spacing-customizer.js', array( 'customize-controls' ), triphub_THEME_VERSION, true );
-		wp_enqueue_style( 'travel-monster-spacing-customizer-controls-css', trailingslashit( get_template_directory_uri()  ) . 'inc/custom-controls/spacing/spacing-customizer.css', array(), triphub_THEME_VERSION );
+		wp_enqueue_script( 'triphub-spacing-customizer', trailingslashit( get_template_directory_uri() )  . 'inc/custom-controls/spacing/spacing-customizer.js', array( 'customize-controls' ), triphub_THEME_VERSION, true );
+		wp_enqueue_style( 'triphub-spacing-customizer-controls-css', trailingslashit( get_template_directory_uri()  ) . 'inc/custom-controls/spacing/spacing-customizer.css', array(), triphub_THEME_VERSION );
 	}
 
 	public function to_json() {
@@ -48,10 +48,10 @@ class triphub_Spacing_Control extends WP_Customize_Control {
 
 	public function content_template() {
 		?>
-		<div class="travel-monster-spacing-control-section">
-			<div class="travel-monster-spacing-control-section-title-area">
+		<div class="triphub-spacing-control-section">
+			<div class="triphub-spacing-control-section-title-area">
 				<# if ( data.label || data.description ) { #>
-					<div class="travel-monster-spacing-control-title-info">
+					<div class="triphub-spacing-control-title-info">
 						<# if ( data.label ) { #>
 							<label for="{{{ data.element }}}-{{{ data.top_label }}}">
 								<span class="customize-control-title">{{ data.label }}</span>
@@ -64,18 +64,18 @@ class triphub_Spacing_Control extends WP_Customize_Control {
 					</div>
 				<# } #>
 
-				<div class="travel-monster-range-slider-controls">
-					<span class="travel-monster-device-controls">
+				<div class="triphub-range-slider-controls">
+					<span class="triphub-device-controls">
 						<# if ( 'undefined' !== typeof ( data.desktop_top ) ) { #>
-							<span class="travel-monster-device-desktop dashicons dashicons-desktop" data-option="desktop" title="{{ data.desktop_label }}"></span>
+							<span class="triphub-device-desktop dashicons dashicons-desktop" data-option="desktop" title="{{ data.desktop_label }}"></span>
 						<# } #>
 
 						<# if ( 'undefined' !== typeof (data.tablet_top) ) { #>
-							<span class="travel-monster-device-tablet dashicons dashicons-tablet" data-option="tablet" title="{{ data.tablet_label }}"></span>
+							<span class="triphub-device-tablet dashicons dashicons-tablet" data-option="tablet" title="{{ data.tablet_label }}"></span>
 						<# } #>
 
 						<# if ( 'undefined' !== typeof (data.mobile_top) ) { #>
-							<span class="travel-monster-device-mobile dashicons dashicons-smartphone" data-option="mobile" title="{{ data.mobile_label }}"></span>
+							<span class="triphub-device-mobile dashicons dashicons-smartphone" data-option="mobile" title="{{ data.mobile_label }}"></span>
 						<# } #>
 					</span>
 				</div>
@@ -83,76 +83,76 @@ class triphub_Spacing_Control extends WP_Customize_Control {
 
 			<div class="spacing-values-container">
 				<div class="spacing-values-desktop spacing-values-area" data-option="desktop" style="display: none;">
-					<div class="travel-monster-spacing-section">
-						<input id="{{{ data.element }}}-{{{ data.label_top }}}" min="0" class="travel-monster-number-control spacing-top" type="number" style="text-align: center;" {{{ data.desktop_top.link }}} value="{{{ data.desktop_top.value }}}" />
+					<div class="triphub-spacing-section">
+						<input id="{{{ data.element }}}-{{{ data.label_top }}}" min="0" class="triphub-number-control spacing-top" type="number" style="text-align: center;" {{{ data.desktop_top.link }}} value="{{{ data.desktop_top.value }}}" />
 						<# if ( data.label_top ) { #>
 							<label for="{{{ data.element }}}-{{{ data.label_top }}}" class="description" style="font-style:normal;">{{ data.label_top }}</label>
 						<# } #>
 					</div>
 
-					<div class="travel-monster-spacing-section">
-						<input id="{{{ data.element }}}-{{{ data.label_right }}}" min="0" class="travel-monster-number-control spacing-right" type="number" style="text-align: center;" {{{ data.desktop_right.link }}} value="{{{ data.desktop_right.value }}}" />
+					<div class="triphub-spacing-section">
+						<input id="{{{ data.element }}}-{{{ data.label_right }}}" min="0" class="triphub-number-control spacing-right" type="number" style="text-align: center;" {{{ data.desktop_right.link }}} value="{{{ data.desktop_right.value }}}" />
 						<# if ( data.label_right ) { #>
 							<label for="{{{ data.element }}}-{{{ data.label_right }}}" class="description" style="font-style:normal;">{{ data.label_right }}</label>
 						<# } #>
 					</div>
 
-					<div class="travel-monster-spacing-section">
-						<input id="{{{ data.element }}}-{{{ data.label_bottom }}}" min="0" class="travel-monster-number-control spacing-bottom" type="number" style="text-align: center;" {{{ data.desktop_bottom.link }}} value="{{{ data.desktop_bottom.value }}}" />
+					<div class="triphub-spacing-section">
+						<input id="{{{ data.element }}}-{{{ data.label_bottom }}}" min="0" class="triphub-number-control spacing-bottom" type="number" style="text-align: center;" {{{ data.desktop_bottom.link }}} value="{{{ data.desktop_bottom.value }}}" />
 						<# if ( data.label_bottom ) { #>
 							<label for="{{{ data.element }}}-{{{ data.label_bottom }}}" class="description" style="font-style:normal;">{{ data.label_bottom }}</label>
 						<# } #>
 					</div>
 
-					<div class="travel-monster-spacing-section">
-						<input id="{{{ data.element }}}-{{{ data.label_left }}}" min="0" class="travel-monster-number-control spacing-left" type="number" style="text-align: center;" {{{ data.desktop_left.link }}} value="{{{ data.desktop_left.value }}}" />
+					<div class="triphub-spacing-section">
+						<input id="{{{ data.element }}}-{{{ data.label_left }}}" min="0" class="triphub-number-control spacing-left" type="number" style="text-align: center;" {{{ data.desktop_left.link }}} value="{{{ data.desktop_left.value }}}" />
 						<# if ( data.label_left ) { #>
 							<label for="{{{ data.element }}}-{{{ data.label_left }}}" class="description" style="font-style:normal;">{{ data.label_left }}</label>
 						<# } #>
 					</div>
 
 					<# if ( data.element ) { #>
-						<div class="travel-monster-spacing-section travel-monster-link-spacing-section">
-							<span class="dashicons dashicons-editor-unlink travel-monster-link-spacing" data-element="{{ data.element }}" title="{{ data.title }}"></span>
-							<span class="dashicons dashicons-admin-links travel-monster-unlink-spacing" style="display:none" data-element="{{ data.element }}" title="{{ data.unlink_title }}"></span>
+						<div class="triphub-spacing-section triphub-link-spacing-section">
+							<span class="dashicons dashicons-editor-unlink triphub-link-spacing" data-element="{{ data.element }}" title="{{ data.title }}"></span>
+							<span class="dashicons dashicons-admin-links triphub-unlink-spacing" style="display:none" data-element="{{ data.element }}" title="{{ data.unlink_title }}"></span>
 						</div>
 					<# } #>
 				</div>
 
 				<# if ( 'undefined' !== typeof ( data.mobile_top ) ) { #>
 					<div class="spacing-values-mobile spacing-values-area" data-option="mobile" style="display: none;">
-						<div class="travel-monster-spacing-section">
-							<input id="{{{ data.element }}}-mobile-{{{ data.label_top }}}" min="0" class="travel-monster-number-control mobile-spacing-top" type="number" style="text-align: center;" {{{ data.mobile_top.link }}} value="{{{ data.mobile_top.value }}}" />
+						<div class="triphub-spacing-section">
+							<input id="{{{ data.element }}}-mobile-{{{ data.label_top }}}" min="0" class="triphub-number-control mobile-spacing-top" type="number" style="text-align: center;" {{{ data.mobile_top.link }}} value="{{{ data.mobile_top.value }}}" />
 							<# if ( data.label_top ) { #>
 								<label for="{{{ data.element }}}-mobile-{{{ data.label_top }}}" class="description" style="font-style:normal;">{{ data.label_top }}</label>
 							<# } #>
 						</div>
 
-						<div class="travel-monster-spacing-section">
-							<input id="{{{ data.element }}}-mobile-{{{ data.label_right }}}" min="0" class="travel-monster-number-control mobile-spacing-right" type="number" style="text-align: center;" {{{ data.mobile_right.link }}} value="{{{ data.mobile_right.value }}}" />
+						<div class="triphub-spacing-section">
+							<input id="{{{ data.element }}}-mobile-{{{ data.label_right }}}" min="0" class="triphub-number-control mobile-spacing-right" type="number" style="text-align: center;" {{{ data.mobile_right.link }}} value="{{{ data.mobile_right.value }}}" />
 							<# if ( data.label_right ) { #>
 								<label for="{{{ data.element }}}-mobile-{{{ data.label_right }}}" class="description" style="font-style:normal;">{{ data.label_right }}</label>
 							<# } #>
 						</div>
 
-						<div class="travel-monster-spacing-section">
-							<input id="{{{ data.element }}}-mobile-{{{ data.label_bottom }}}" min="0" class="travel-monster-number-control mobile-spacing-bottom" type="number" style="text-align: center;" {{{ data.mobile_bottom.link }}} value="{{{ data.mobile_bottom.value }}}" />
+						<div class="triphub-spacing-section">
+							<input id="{{{ data.element }}}-mobile-{{{ data.label_bottom }}}" min="0" class="triphub-number-control mobile-spacing-bottom" type="number" style="text-align: center;" {{{ data.mobile_bottom.link }}} value="{{{ data.mobile_bottom.value }}}" />
 							<# if ( data.label_bottom ) { #>
 								<label for="{{{ data.element }}}-mobile-{{{ data.label_bottom }}}" class="description" style="font-style:normal;">{{ data.label_bottom }}</label>
 							<# } #>
 						</div>
 
-						<div class="travel-monster-spacing-section">
-							<input id="{{{ data.element }}}-mobile-{{{ data.label_left }}}" min="0" class="travel-monster-number-control mobile-spacing-left" type="number" style="text-align: center;" {{{ data.mobile_left.link }}} value="{{{ data.mobile_left.value }}}" />
+						<div class="triphub-spacing-section">
+							<input id="{{{ data.element }}}-mobile-{{{ data.label_left }}}" min="0" class="triphub-number-control mobile-spacing-left" type="number" style="text-align: center;" {{{ data.mobile_left.link }}} value="{{{ data.mobile_left.value }}}" />
 							<# if ( data.label_left ) { #>
 								<label for="{{{ data.element }}}-mobile-{{{ data.label_left }}}" class="description" style="font-style:normal;">{{ data.label_left }}</label>
 							<# } #>
 						</div>
 
 						<# if ( data.element ) { #>
-							<div class="travel-monster-spacing-section travel-monster-link-spacing-section">
-								<span class="dashicons dashicons-editor-unlink travel-monster-link-spacing" data-element="{{ data.element }}" title="{{ data.title }}"></span>
-								<span class="dashicons dashicons-admin-links travel-monster-unlink-spacing" style="display:none" data-element="{{ data.element }}" title="{{ data.unlink_title }}"></span>
+							<div class="triphub-spacing-section triphub-link-spacing-section">
+								<span class="dashicons dashicons-editor-unlink triphub-link-spacing" data-element="{{ data.element }}" title="{{ data.title }}"></span>
+								<span class="dashicons dashicons-admin-links triphub-unlink-spacing" style="display:none" data-element="{{ data.element }}" title="{{ data.unlink_title }}"></span>
 							</div>
 						<# } #>
 					</div>

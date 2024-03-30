@@ -853,7 +853,7 @@ function triphub_spacing_live_update(settings, responsive, selector, property, u
 			var icon = newval === 'three' ? triphub_view_port.breadcrumb_sep_three
 				: newval === 'two' ? triphub_view_port.breadcrumb_sep_two
 				: triphub_view_port.breadcrumb_sep_one;		
-			var separator = jQuery(".travel-monster-breadcrumb-main-wrap span.separator")
+			var separator = jQuery(".triphub-breadcrumb-main-wrap span.separator")
 			$.each(separator, function(index, value) {
 				$(value).html(icon)		
 			})

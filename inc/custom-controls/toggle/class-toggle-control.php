@@ -48,8 +48,8 @@ if ( ! class_exists( 'triphub_Toggle_Control' ) ){
 			// Use minified libraries if SCRIPT_DEBUG is false
 			$build  = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '/build' : '';
 			$suffix = ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) ? '' : '.min';
-			wp_enqueue_style( 'travel-monster-toggle', get_template_directory_uri() . '/inc/custom-controls/toggle' . $build . '/toggle' . $suffix . '.css', null );
-			wp_enqueue_script( 'travel-monster-toggle', get_template_directory_uri() . '/inc/custom-controls/toggle' . $build . '/toggle' . $suffix . '.js', array( 'jquery' ), false, true ); //for toggle        
+			wp_enqueue_style( 'triphub-toggle', get_template_directory_uri() . '/inc/custom-controls/toggle' . $build . '/toggle' . $suffix . '.css', null );
+			wp_enqueue_script( 'triphub-toggle', get_template_directory_uri() . '/inc/custom-controls/toggle' . $build . '/toggle' . $suffix . '.js', array( 'jquery' ), false, true ); //for toggle        
 		}
         
 		protected function content_template() {

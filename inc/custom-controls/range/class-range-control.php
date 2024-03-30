@@ -23,7 +23,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'triphub_Range_Sl
 		 * @access public
 		 * @var string
 		 */
-		public $type = 'travel-monster-range-slider';
+		public $type = 'triphub-range-slider';
 
 		public $description = '';
 
@@ -73,8 +73,8 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'triphub_Range_Sl
 		 * @access public
 		 */
 		public function enqueue() {
-			wp_enqueue_style( 'travel-monster-range-slider', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/range/slider-control.css', null );
-			wp_enqueue_script( 'travel-monster-range-slider', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/range/slider-control.js', array( 'jquery', 'customize-base', 'jquery-ui-slider' ), false, true );			
+			wp_enqueue_style( 'triphub-range-slider', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/range/slider-control.css', null );
+			wp_enqueue_script( 'triphub-range-slider', trailingslashit( get_template_directory_uri() ) . 'inc/custom-controls/range/slider-control.js', array( 'jquery', 'customize-base', 'jquery-ui-slider' ), false, true );			
 		}
 
 		/**
@@ -89,10 +89,10 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'triphub_Range_Sl
 		 */
 		protected function content_template() {
 			?>
-			<div class="travel-monster-range-slider-control  <# if ( ! data.collapsed ) { #>is-active<# } #><# if ( data.group ) { #>_{{ data.group }}<# } #>">
-				<div class="travel-monster-range-title-area">
+			<div class="triphub-range-slider-control  <# if ( ! data.collapsed ) { #>is-active<# } #><# if ( data.group ) { #>_{{ data.group }}<# } #>">
+				<div class="triphub-range-title-area">
 					<# if ( data.label || data.description ) { #>
-						<div class="travel-monster-range-title-info">
+						<div class="triphub-range-title-info">
 							<# if ( data.label ) { #>
 								<span class="customize-control-title">{{{ data.label }}}</span>
 							<# } #>
@@ -103,30 +103,30 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'triphub_Range_Sl
 						</div>
 					<# } #>
 
-					<div class="travel-monster-range-slider-controls">
-						<span class="travel-monster-device-controls">
+					<div class="triphub-range-slider-controls">
+						<span class="triphub-device-controls">
 							<# if ( 'undefined' !== typeof ( data.desktop ) ) { #>
-								<span class="travel-monster-device-desktop dashicons dashicons-desktop" data-option="desktop" title="{{ data.desktop_label }}"></span>
+								<span class="triphub-device-desktop dashicons dashicons-desktop" data-option="desktop" title="{{ data.desktop_label }}"></span>
 							<# } #>
 
 							<# if ( 'undefined' !== typeof (data.tablet) ) { #>
-								<span class="travel-monster-device-tablet dashicons dashicons-tablet" data-option="tablet" title="{{ data.tablet_label }}"></span>
+								<span class="triphub-device-tablet dashicons dashicons-tablet" data-option="tablet" title="{{ data.tablet_label }}"></span>
 							<# } #>
 
 							<# if ( 'undefined' !== typeof (data.mobile) ) { #>
-								<span class="travel-monster-device-mobile dashicons dashicons-smartphone" data-option="mobile" title="{{ data.mobile_label }}"></span>
+								<span class="triphub-device-mobile dashicons dashicons-smartphone" data-option="mobile" title="{{ data.mobile_label }}"></span>
 							<# } #>
 						</span>
 
-						<span title="{{ data.reset_label }}" class="travel-monster-reset dashicons dashicons-image-rotate"></span>
+						<span title="{{ data.reset_label }}" class="triphub-reset dashicons dashicons-image-rotate"></span>
 					</div>
 				</div>
 
-				<div class="travel-monster-range-slider-areas">
+				<div class="triphub-range-slider-areas">
 					<# if ( 'undefined' !== typeof ( data.desktop ) ) { #>
 						<label class="range-option-area" data-option="desktop" style="display: none;">
 							<div class="wrapper <# if ( '' !== data.choices['desktop']['unit'] ) { #>has-unit<# } #>">
-								<div class="travel-monster-slider" data-step="{{ data.choices['desktop']['step'] }}" data-min="{{ data.choices['desktop']['min'] }}" data-max="{{ data.choices['desktop']['max'] }}"></div>
+								<div class="triphub-slider" data-step="{{ data.choices['desktop']['step'] }}" data-min="{{ data.choices['desktop']['min'] }}" data-max="{{ data.choices['desktop']['max'] }}"></div>
 
 								<div class="triphub_range_value <# if ( '' == data.choices['desktop']['unit'] ) { #>no-unit<# } #>">
 									<input <# if ( data.choices['desktop']['edit'] ) { #>style="display:inline-block;"<# } else { #>style="display:none;"<# } #> type="number" step="{{ data.choices['desktop']['step'] }}" class="desktop-range value" value="{{ data.desktop.value }}" min="{{ data.choices['desktop']['min'] }}" max="{{ data.choices['desktop']['max'] }}" {{{ data.desktop.link }}} data-reset_value="{{ data.desktop.default }}" />
@@ -143,7 +143,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'triphub_Range_Sl
 					<# if ( 'undefined' !== typeof ( data.tablet ) ) { #>
 						<label class="range-option-area" data-option="tablet" style="display:none">
 							<div class="wrapper <# if ( '' !== data.choices['tablet']['unit'] ) { #>has-unit<# } #>">
-								<div class="travel-monster-slider" data-step="{{ data.choices['tablet']['step'] }}" data-min="{{ data.choices['tablet']['min'] }}" data-max="{{ data.choices['tablet']['max'] }}"></div>
+								<div class="triphub-slider" data-step="{{ data.choices['tablet']['step'] }}" data-min="{{ data.choices['tablet']['min'] }}" data-max="{{ data.choices['tablet']['max'] }}"></div>
 
 								<div class="triphub_range_value <# if ( '' == data.choices['desktop']['unit'] ) { #>no-unit<# } #>">
 									<input <# if ( data.choices['tablet']['edit'] ) { #>style="display:inline-block;"<# } else { #>style="display:none;"<# } #> type="number" step="{{ data.choices['tablet']['step'] }}" class="tablet-range value" value="{{ data.tablet.value }}" min="{{ data.choices['tablet']['min'] }}" max="{{ data.choices['tablet']['max'] }}" {{{ data.tablet.link }}} data-reset_value="{{ data.tablet.default }}" />
@@ -160,7 +160,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'triphub_Range_Sl
 					<# if ( 'undefined' !== typeof ( data.mobile ) ) { #>
 						<label class="range-option-area" data-option="mobile" style="display:none;">
 							<div class="wrapper <# if ( '' !== data.choices['mobile']['unit'] ) { #>has-unit<# } #>">
-								<div class="travel-monster-slider" data-step="{{ data.choices['mobile']['step'] }}" data-min="{{ data.choices['mobile']['min'] }}" data-max="{{ data.choices['mobile']['max'] }}"></div>
+								<div class="triphub-slider" data-step="{{ data.choices['mobile']['step'] }}" data-min="{{ data.choices['mobile']['min'] }}" data-max="{{ data.choices['mobile']['max'] }}"></div>
 
 								<div class="triphub_range_value <# if ( '' == data.choices['desktop']['unit'] ) { #>no-unit<# } #>">
 									<input <# if ( data.choices['mobile']['edit'] ) { #>style="display:inline-block;"<# } else { #>style="display:none;"<# } #> type="number" step="{{ data.choices['mobile']['step'] }}" class="mobile-range value" value="{{ data.mobile.value }}" min="{{ data.choices['mobile']['min'] }}" max="{{ data.choices['mobile']['max'] }}" {{{ data.mobile.link }}} data-reset_value="{{ data.mobile.default }}" />

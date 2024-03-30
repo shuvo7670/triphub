@@ -1,8 +1,8 @@
-.travel-monster-font-family {
+.triphub-font-family {
 	margin-bottom: 12px;
 }
 
-.travel-monster-weight-transform-wrapper {
+.triphub-weight-transform-wrapper {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
@@ -11,22 +11,22 @@
 	justify-content: space-between;
 }
 
-.travel-monster-font-weight,
-.travel-monster-font-transform {
+.triphub-font-weight,
+.triphub-font-transform {
     width: 100%;
 }
 
-.travel-monster-font-family label,
-.travel-monster-font-weight label,
-.travel-monster-font-transform label{
+.triphub-font-family label,
+.triphub-font-weight label,
+.triphub-font-transform label{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.travel-monster-font-family label p,
-.travel-monster-font-weight label p,
-.travel-monster-font-transform label p{
+.triphub-font-family label p,
+.triphub-font-weight label p,
+.triphub-font-transform label p{
     flex: 0 0 50%;
 }
 

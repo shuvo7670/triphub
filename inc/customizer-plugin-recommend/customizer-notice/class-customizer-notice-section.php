@@ -267,9 +267,9 @@ class triphub_Customizer_Notice_Section extends WP_Customize_Section {
 				<div class="recomended-actions_container" id="plugin-filter">
 					<# if( data.recommended_plugins.length > 0 ){ #>
 						<# for (action in data.recommended_plugins) { #>
-							<div class="travel-monster-recommeded-actions-container travel-monster-recommended-plugins" data-index="{{ data.recommended_plugins[action].index }}">
+							<div class="triphub-recommeded-actions-container triphub-recommended-plugins" data-index="{{ data.recommended_plugins[action].index }}">
 								<# if( !data.recommended_plugins[action].check ){ #>
-									<div class="travel-monster-recommeded-actions">
+									<div class="triphub-recommeded-actions">
 										<p class="title">{{{ data.recommended_plugins[action].title }}}</p>
 										<span data-action="dismiss" class="dashicons dashicons-no dismiss-button-recommended-plugin" id="{{ data.recommended_plugins[action].id }}"></span>
 										<div class="description">{{{ data.recommended_plugins[action].description }}}</div>

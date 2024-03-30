@@ -16,7 +16,7 @@ if ( ! class_exists( 'triphub_Select_Control' ) ){
     */
 	class triphub_Select_Control extends WP_Customize_Control {
 
-		public $type = 'travel-monster-select';
+		public $type = 'triphub-select';
 
 		public $multiple = 1;
         
@@ -51,8 +51,8 @@ if ( ! class_exists( 'triphub_Select_Control' ) ){
         
         public function enqueue() {
             
-			wp_enqueue_style( 'travel-monster-select', get_template_directory_uri() . '/inc/custom-controls/select/select.min.css', null );
-			wp_enqueue_script( 'travel-monster-select', get_template_directory_uri() . '/inc/custom-controls/select/select.min.js', array( 'jquery' ), false, true ); //for multi select    
+			wp_enqueue_style( 'triphub-select', get_template_directory_uri() . '/inc/custom-controls/select/select.min.css', null );
+			wp_enqueue_script( 'triphub-select', get_template_directory_uri() . '/inc/custom-controls/select/select.min.js', array( 'jquery' ), false, true ); //for multi select    
 		}
 		
 		protected function content_template() {

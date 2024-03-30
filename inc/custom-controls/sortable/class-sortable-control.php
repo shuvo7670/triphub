@@ -16,7 +16,7 @@ if( ! class_exists( 'triphub_Sortable_Control' ) ){
      */
     class triphub_Sortable_Control extends WP_Customize_Control {
     
-    	public $type = 'travel-monster-sortable';
+    	public $type = 'triphub-sortable';
         
         public $option_type = 'theme_mod';
         
@@ -24,8 +24,8 @@ if( ! class_exists( 'triphub_Sortable_Control' ) ){
 		public $collapsed = true;
 
     	public function enqueue() {
-            wp_enqueue_style( 'travel-monster-sortable', get_template_directory_uri() . '/inc/custom-controls/sortable/sortable.css', null );
-    		wp_enqueue_script( 'travel-monster-sortable', get_template_directory_uri() . '/inc/custom-controls/sortable/sortable.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-sortable' ), false, true );
+            wp_enqueue_style( 'triphub-sortable', get_template_directory_uri() . '/inc/custom-controls/sortable/sortable.css', null );
+    		wp_enqueue_script( 'triphub-sortable', get_template_directory_uri() . '/inc/custom-controls/sortable/sortable.js', array( 'jquery', 'jquery-ui-core', 'jquery-ui-sortable' ), false, true );
     	}
     
     	public function to_json() {

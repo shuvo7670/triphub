@@ -62,7 +62,7 @@ function triphub_customize_register_general_button( $wp_customize ){
             $wp_customize,
             'btn_roundness',
             array(
-                'type'     => 'travel-monster-spacing',
+                'type'     => 'triphub-spacing',
                 'label'    => __( 'Button Roundness', 'triphub' ),
                 'section'  => 'general_button_section',
                 'settings' => array(
@@ -119,7 +119,7 @@ function triphub_customize_register_general_button( $wp_customize ){
             $wp_customize,
             'button_padding',
             array(
-                'type'     => 'travel-monster-spacing',
+                'type'     => 'triphub-spacing',
                 'label'    => esc_html__( 'Button Padding', 'triphub' ),
                 'section'  => 'general_button_section',
                 'settings' => array(

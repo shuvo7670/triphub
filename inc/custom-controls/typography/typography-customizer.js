@@ -1,10 +1,10 @@
 ( function( api ) {
 
-	api.controlConstructor['travel-monster-typography'] = api.Control.extend( {
+	api.controlConstructor['triphub-typography'] = api.Control.extend( {
 		ready: function() {
 			var control = this;
 
-			control.container.on( 'change', '.travel-monster-font-family select',
+			control.container.on( 'change', '.triphub-font-family select',
 				function() {
 					var _this = jQuery( this ),
 						_value = _this.val(),
@@ -43,19 +43,19 @@
 
 							// Get existing variants if this font is already selected
 							var got_variants = false;
-							jQuery( '.travel-monster-font-family select' ).not( _this ).each( function( key, select ) {
-								var parent = jQuery( this ).closest( '.travel-monster-font-family' );
+							jQuery( '.triphub-font-family select' ).not( _this ).each( function( key, select ) {
+								var parent = jQuery( this ).closest( '.triphub-font-family' );
 
 								if ( _value == jQuery( select ).val() && _this.data( 'category' ) !== jQuery( select ).data( 'category' ) ) {
 									if ( ! got_variants ) {
-										updated_variants = jQuery( parent.next( '.travel-monster-font-variant' ).find( 'select' ) ).val();
+										updated_variants = jQuery( parent.next( '.triphub-font-variant' ).find( 'select' ) ).val();
 										got_variants = true;
 									}
 								}
 							} );
 
 							// We're using a Google font, so show the variants field
-							_this.closest( '.travel-monster-font-family' ).next( 'div' ).show();
+							_this.closest( '.triphub-font-family' ).next( 'div' ).show();
 
 							// Remove existing variants
 							jQuery( 'select[name="' + _variantsID + '"]' ).find( 'option' ).remove();
@@ -76,7 +76,7 @@
 							control.settings[ 'category' ].set( fonts[ id ].category );
 							jQuery( 'input[name="' + _categoryID + '"' ).val( fonts[ id ].category );
 						} else {
-							_this.closest( '.travel-monster-font-family' ).next( 'div' ).hide();
+							_this.closest( '.triphub-font-family' ).next( 'div' ).hide();
 							control.settings[ 'category' ].set( '' )
 							control.settings[ 'variant' ].set( '' )
 							jQuery( 'input[name="' + _categoryID + '"' ).val( '' );
@@ -86,16 +86,16 @@
 				}
 			);
 
-			control.container.on( 'change', '.travel-monster-font-variant select',
+			control.container.on( 'change', '.triphub-font-variant select',
 				function() {
 					var _this = jQuery( this );
 					var variants = _this.val();
 
 					control.settings['variant'].set( variants );
 
-					jQuery( '.travel-monster-font-variant select' ).each( function( key, value ) {
+					jQuery( '.triphub-font-variant select' ).each( function( key, value ) {
 						var this_control = jQuery( this ).closest( 'li' ).attr( 'id' ).replace( 'customize-control-', '' );
-						var parent = jQuery( this ).closest( '.travel-monster-font-variant' );
+						var parent = jQuery( this ).closest( '.triphub-font-variant' );
 						var font_val = api.control( this_control ).settings['family'].get();
 
 						if ( font_val == control.settings['family'].get() && _this.attr( 'name' ) !== jQuery( value ).attr( 'name' ) ) {
@@ -106,19 +106,19 @@
 				}
 			);
 
-			control.container.on( 'change', '.travel-monster-font-category input',
+			control.container.on( 'change', '.triphub-font-category input',
 				function() {
 					control.settings['category'].set( jQuery( this ).val() );
 				}
 			);
 
-			control.container.on( 'change', '.travel-monster-font-weight select',
+			control.container.on( 'change', '.triphub-font-weight select',
 				function() {
 					control.settings['weight'].set( jQuery( this ).val() );
 				}
 			);
 
-			control.container.on( 'change', '.travel-monster-font-transform select',
+			control.container.on( 'change', '.triphub-font-transform select',
 				function() {
 					control.settings['transform'].set( jQuery( this ).val() );
 				}
@@ -131,9 +131,9 @@
 
 jQuery( document ).ready( function( $ ) {
 
-	$( '.travel-monster-font-family select' ).select2();
+	$( '.triphub-font-family select' ).select2();
 
-	$( '.travel-monster-font-variant' ).each( function( key, value ) {
+	$( '.triphub-font-variant' ).each( function( key, value ) {
 		var _this = $( this );
 		var value = _this.data( 'saved-value' );
 
@@ -144,10 +144,10 @@ jQuery( document ).ready( function( $ ) {
 		_this.find( 'select' ).select2().val( value ).trigger( 'change.select2' );
 	} );
 
-	$( ".travel-monster-font-family" ).each( function( key, value ) {
+	$( ".triphub-font-family" ).each( function( key, value ) {
 		var _this = $( this );
 		if ( $.inArray( _this.find( 'select' ).val(), typography_defaults ) !== -1 ) {
-			_this.next( '.travel-monster-font-variant' ).hide();
+			_this.next( '.triphub-font-variant' ).hide();
 		}
 	} );
 

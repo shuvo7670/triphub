@@ -1,4 +1,4 @@
-wp.customize.controlConstructor['travel-monster-radio-image'] = wp.customize.Control.extend({
+wp.customize.controlConstructor['triphub-radio-image'] = wp.customize.Control.extend({
 	ready: function() {
 		'use strict';
 		var control = this;

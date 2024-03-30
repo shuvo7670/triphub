@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: TripHub 1.1.4\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/travel-monster\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/triphub\n"
 "POT-Creation-Date: 2024-02-05 10:21:51+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -2099,7 +2099,7 @@ msgid "TripHub"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "https://wptravelengine.com/wordpress-travel-themes/travel-monster/"
+msgid "https://wptravelengine.com/wordpress-travel-themes/triphub/"
 msgstr ""
 
 #. Description of the plugin/theme
@@ -2115,7 +2115,7 @@ msgid ""
 "book them. TripHub is mobile-friendly, SEO-optimized, "
 "translation-ready and RTL-ready. Plus, it is compatible with Elementor and "
 "Gutenberg, offering more flexibility to customise your website. Check the "
-"demos here: https://wptravelenginedemo.com/travel-monster/."
+"demos here: https://wptravelenginedemo.com/triphub/."
 msgstr ""
 
 #. Author URI of the plugin/theme

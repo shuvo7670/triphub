@@ -59,7 +59,7 @@ function triphub_single_trip_feature_image(){
                 if( count( $wpte_trip_images ) > 1 ){
                     unset( $wpte_trip_images['enable'] );
                     foreach ( $wpte_trip_images as $image ) {  
-                        $url = wp_get_attachment_image_url( $image, 'travel-monster-single-layout-two' );
+                        $url = wp_get_attachment_image_url( $image, 'triphub-single-layout-two' );
                         echo '<div>';
                         echo '<img class="temp-img-item" src="'. esc_url( $url ) . '">';
                         echo '</div>';

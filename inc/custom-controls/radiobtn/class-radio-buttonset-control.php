@@ -45,8 +45,8 @@ if ( ! class_exists( 'triphub_Radio_Buttonset_Control' ) ) {
 		}
         
         public function enqueue() {            
-            wp_enqueue_style( 'travel-monster-radio-buttonset', get_template_directory_uri() . '/inc/custom-controls/radiobtn/radio-buttonset.css', null );
-            wp_enqueue_script( 'travel-monster-radio-buttonset', get_template_directory_uri() . '/inc/custom-controls/radiobtn/radio-buttonset.js', array( 'jquery' ), false, true ); //for radio buttonset        
+            wp_enqueue_style( 'triphub-radio-buttonset', get_template_directory_uri() . '/inc/custom-controls/radiobtn/radio-buttonset.css', null );
+            wp_enqueue_script( 'triphub-radio-buttonset', get_template_directory_uri() . '/inc/custom-controls/radiobtn/radio-buttonset.js', array( 'jquery' ), false, true ); //for radio buttonset        
         }
         
         protected function content_template() {

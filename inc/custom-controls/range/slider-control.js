@@ -1,4 +1,4 @@
-wp.customize.controlConstructor['travel-monster-range-slider'] = wp.customize.Control.extend({
+wp.customize.controlConstructor['triphub-range-slider'] = wp.customize.Control.extend({
 
 	ready: function() {
 
@@ -6,11 +6,11 @@ wp.customize.controlConstructor['travel-monster-range-slider'] = wp.customize.Co
 
 		var control = this,
 		    value,
-			controlClass = '.customize-control-travel-monster-range-slider',
+			controlClass = '.customize-control-triphub-range-slider',
 			footerActions = jQuery( '#customize-footer-actions' );
 		
 		// Set up the sliders
-		jQuery( '.travel-monster-slider' ).each( function() {
+		jQuery( '.triphub-slider' ).each( function() {
 			var _this = jQuery( this );
 			var _input = _this.closest( 'label' ).find( 'input[type="number"]' );
 			var _text = _input.next( '.value' );
@@ -32,15 +32,15 @@ wp.customize.controlConstructor['travel-monster-range-slider'] = wp.customize.Co
 			if ( '' == value ) {
 				value = -1;
 			}
-			jQuery( this ).closest( 'label' ).find( '.travel-monster-slider' ).slider( 'value', parseFloat(value)).change();
+			jQuery( this ).closest( 'label' ).find( '.triphub-slider' ).slider( 'value', parseFloat(value)).change();
 		});
 
 		// Handle the reset button
-		jQuery( controlClass + ' .travel-monster-reset' ).on( 'click', function() {
+		jQuery( controlClass + ' .triphub-reset' ).on( 'click', function() {
 			var icon = jQuery( this ),
-				visible_area = icon.closest( '.travel-monster-range-title-area' ).next( '.travel-monster-range-slider-areas' ).children( 'label:visible' ),
+				visible_area = icon.closest( '.triphub-range-title-area' ).next( '.triphub-range-slider-areas' ).children( 'label:visible' ),
 				input = visible_area.find( 'input[type=number]' ),
-				slider_value = visible_area.find( '.travel-monster-slider' ),
+				slider_value = visible_area.find( '.triphub-slider' ),
 				visual_value = visible_area.find( '.triphub_range_value' ),
 				reset_value = input.attr( 'data-reset_value' );
 			
@@ -56,17 +56,17 @@ wp.customize.controlConstructor['travel-monster-range-slider'] = wp.customize.Co
 		});
 		
 		// Figure out which device icon to make active on load
-		jQuery( controlClass + ' .travel-monster-range-slider-control' ).each( function() {
+		jQuery( controlClass + ' .triphub-range-slider-control' ).each( function() {
 			var _this = jQuery( this );
-			_this.find( '.travel-monster-device-controls' ).children( 'span:first-child' ).addClass( 'selected' );
+			_this.find( '.triphub-device-controls' ).children( 'span:first-child' ).addClass( 'selected' );
 			_this.find( '.range-option-area:first-child' ).show();
 		});
 		
 		// Do stuff when device icons are clicked
-		jQuery( controlClass + ' .travel-monster-device-controls > span' ).on( 'click', function( event ) {
+		jQuery( controlClass + ' .triphub-device-controls > span' ).on( 'click', function( event ) {
 			var device = jQuery( this ).data( 'option' );
 			
-			jQuery( controlClass + ' .travel-monster-device-controls span' ).each( function() {
+			jQuery( controlClass + ' .triphub-device-controls span' ).each( function() {
 				var _this = jQuery( this );
 				if ( device == _this.attr( 'data-option' ) ) {
 					_this.addClass( 'selected' );
@@ -74,7 +74,7 @@ wp.customize.controlConstructor['travel-monster-range-slider'] = wp.customize.Co
 				}
 			});
 			
-			jQuery( controlClass + ' .travel-monster-range-slider-areas label' ).each( function() {
+			jQuery( controlClass + ' .triphub-range-slider-areas label' ).each( function() {
 				var _this = jQuery( this );
 				if ( device == _this.attr( 'data-option' ) ) {
 					_this.show();
@@ -89,7 +89,7 @@ wp.customize.controlConstructor['travel-monster-range-slider'] = wp.customize.Co
 		// Set the selected devices in our control when the Customizer devices are clicked
 		footerActions.find( '.devices button' ).on( 'click', function() {
 			var device = jQuery( this ).data( 'device' );
-			jQuery( controlClass + ' .travel-monster-device-controls span' ).each( function() {
+			jQuery( controlClass + ' .triphub-device-controls span' ).each( function() {
 				var _this = jQuery( this );
 				if ( device == _this.attr( 'data-option' ) ) {
 					_this.addClass( 'selected' );
@@ -97,7 +97,7 @@ wp.customize.controlConstructor['travel-monster-range-slider'] = wp.customize.Co
 				}
 			});
 			
-			jQuery( controlClass + ' .travel-monster-range-slider-areas label' ).each( function() {
+			jQuery( controlClass + ' .triphub-range-slider-areas label' ).each( function() {
 				var _this = jQuery( this );
 				if ( device == _this.attr( 'data-option' ) ) {
 					_this.show();

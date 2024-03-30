@@ -33,7 +33,7 @@
     background-color: transparent;
 }
 
-#customize-controls .travel-monster-group-title {
+#customize-controls .triphub-group-title {
     height: auto !important;
     display: block !important;
     visibility: visible !important;
@@ -72,7 +72,7 @@
     background-color: transparent;
 }
 
-#customize-controls .travel-monster-group-title {
+#customize-controls .triphub-group-title {
     height: auto !important;
     display: block !important;
     visibility: visible !important;
@@ -88,12 +88,12 @@
     height: 100%;
 }
 
-.customize-control-travel-monster-radio-image .image {
+.customize-control-triphub-radio-image .image {
     margin-top: 15px;
 }
 
-.customize-control-travel-monster-radio-image label svg,
-.customize-control-travel-monster-radio-image label img {
+.customize-control-triphub-radio-image label svg,
+.customize-control-triphub-radio-image label img {
     max-width: 125px;
     height: auto;
 }
@@ -131,8 +131,8 @@
     grid-template-columns: repeat(1, 1fr) !important;
 }
 
-.customize-control-travel-monster-radio-image label svg,
-.customize-control-travel-monster-radio-image label img {
+.customize-control-triphub-radio-image label svg,
+.customize-control-triphub-radio-image label img {
     max-width: 100%;
 }
 
@@ -146,7 +146,7 @@
     margin-bottom: 0;
 }
 
-.travel-monster-slider.ui-slider {
+.triphub-slider.ui-slider {
     margin: 0 20px 0 0;
 }
 

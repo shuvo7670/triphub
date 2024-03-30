@@ -72,12 +72,12 @@
         if ($('.blog').length > 0 || $('.search').length > 0 || $('.archive').length > 0) {
             $(window).scroll(function () {
                 if (!loading_posts && !last_post) {
-                    lastPostVisible = $('.travel-monster-post').last().triphubIsOnScreen();
+                    lastPostVisible = $('.triphub-post').last().triphubIsOnScreen();
                     if (lastPostVisible) {
                         if (pageNum <= max) {
                             loading_posts = true;
 
-                            $('.pagination_holder').load(nextLink + ' .travel-monster-post', function () {
+                            $('.pagination_holder').load(nextLink + ' .triphub-post', function () {
                                 // Update page number and nextLink.
                                 pageNum++;
 
@@ -90,12 +90,12 @@
 
                                 if (triphub_ajax.bp_layout == 'masonry_grid') {
                                     // Make jQuery object from HTML string
-                                    moreBlocks = $(load_html).filter('article.travel-monster-post');
+                                    moreBlocks = $(load_html).filter('article.triphub-post');
 
                                     // Append new blocks to container
-                                    $('.travel-monster-container-wrap').append(moreBlocks).imagesLoaded(function () {
+                                    $('.triphub-container-wrap').append(moreBlocks).imagesLoaded(function () {
                                         // Have Masonry position new blocks
-                                        $('.travel-monster-container-wrap').masonry('appended', moreBlocks);
+                                        $('.triphub-container-wrap').masonry('appended', moreBlocks);
                                     });
                                 } else {
                                     $('.site-main article:last').after(load_html); // just simply append content without massonry
