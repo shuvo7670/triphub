@@ -89,6 +89,11 @@ require get_template_directory() . '/inc/tgmpa/recommended-plugins.php';
 require get_template_directory() . '/inc/helper/assets.php';
 
 /**
+ * Main Helper 
+*/
+require get_template_directory() . '/inc/helper/helper.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

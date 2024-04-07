@@ -224,10 +224,9 @@ function triphub_content_start(){
 	}
 
 	$enable_container_meta = get_post_meta(get_the_ID(), '_triphub_enable_container', true);
-	$is_enable_container = !empty( $enable_container_meta ) && $enable_container_meta == 'on' ? 'container' : '';
+	$is_enable_container = (!empty( $enable_container_meta ) && $enable_container_meta == 'on') ? 'container' : '';
 
-	$class  = ( $container_layout == 'full_width_stretched' && !is_404() ) ? 'container-full' : 'page-wrapper '.$is_enable_container.''; 
-
+	$class  = ( $container_layout == 'full_width_stretched' && !is_404() ) ? 'container-full' : 'page-wrapper'.$is_enable_container.''; 
 	if( is_singular('post') && $single_post_layout === 'two' ){
 		
 		$post_crop_img  = get_theme_mod( 'ed_crop_single_image', $defaults[ 'ed_crop_single_image' ] );
@@ -259,6 +258,7 @@ function triphub_content_start(){
 			</div>
 		</div>
 		<?php 
+		do_action('triphub_page_after');
 	}
 	
 	if( is_singular( 'trip' ) ){
@@ -274,9 +274,9 @@ function triphub_content_start(){
 		}
 		
 	}
-
 	if( !is_404() ) { ?>
-		<div class="site-content">		
+		<div class="site-content">
+			<?php 	do_action('triphub_page_before') ?>
 			<div class="<?php echo esc_attr( $class ); ?>">
 				<div class="main-content-wrapper">
 					 <?php triphub_archive_tax_description(); ?>
