@@ -58,11 +58,13 @@ $triphub_sidebar_layout = array(
 function triphub_sidebar_layout_callback(){
     global $post , $triphub_sidebar_layout;
     wp_nonce_field( basename( __FILE__ ), 'triphub_nonce' ); 
+    $enable_container = get_post_meta($post->ID, '_triphub_enable_container', true);
     if( get_post_meta( $post->ID, '_triphub_sidebar_layout', true ) ){
         $layout = get_post_meta( $post->ID, '_triphub_sidebar_layout', true );
     }else{
         $layout = 'default-sidebar';
     }
+    
     ?>     
     <table class="form-table">
         <tr>
@@ -81,6 +83,18 @@ function triphub_sidebar_layout_callback(){
                         <?php 
                     } // end foreach 
                 ?>
+                <div class="clear"></div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4"><em class="f13"><?php esc_html_e( 'Enable Container', 'triphub' ); ?></em></td>
+        </tr>    
+        <tr>
+            <td>
+                <label for="">
+                    <input type="checkbox" name="enable_container" <?php echo !empty( $enable_container ) && $enable_container == 'on' ? 'checked' : '' ?>>
+                    <?php echo esc_html__('Enable Container', 'triphub') ?>
+                </label>
                 <div class="clear"></div>
             </td>
         </tr>
@@ -111,6 +125,11 @@ function triphub_save_sidebar_layout( $post_id ){
         update_post_meta( $post_id, '_triphub_sidebar_layout', $layout );
     }else{
         delete_post_meta( $post_id, '_triphub_sidebar_layout' );
-    }   
+    }
+
+    // Container meta
+    $enable_container = isset( $_POST['enable_container'] ) ? sanitize_key( $_POST['enable_container'] ) : '';
+    update_post_meta( $post_id, '_triphub_enable_container', $enable_container );
+    
 }
 add_action( 'save_post' , 'triphub_save_sidebar_layout' );

@@ -896,6 +896,10 @@ body.rightsidebar #primary {
     padding-right: 0;
   }
 }
+.main-content-wrapper {
+  display: flex;
+  justify-content: start;
+}
 
 body.leftsidebar .main-content-wrapper {
   flex-direction: row-reverse;
