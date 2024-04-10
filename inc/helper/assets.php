@@ -66,6 +66,16 @@ if( !class_exists('Triphub_Assets') ) {
                     'version' => filemtime( TRIPHUB_ASSETS_ROOT_DIR . '/js/owl.carousel.min.js' ),
                     'deps'    => [ 'jquery' ]
                 ],
+                'swiper' => [
+                    'src'     => TRIPHUB_ASSETS_ROOT . '/js/swiper-bundle.min.js',
+                    'version' => filemtime( TRIPHUB_ASSETS_ROOT_DIR . '/js/swiper-bundle.min.js' ),
+                    'deps'    => [ 'jquery' ]
+                ],
+                'font-awesome' => [
+                    'src'     => TRIPHUB_ASSETS_ROOT . '/js/font-awesome.min.js',
+                    'version' => filemtime( TRIPHUB_ASSETS_ROOT_DIR . '/js/font-awesome.min.js' ),
+                    'deps'    => [ 'jquery' ]
+                ],
                 'slick' => [
                     'src'     => TRIPHUB_ASSETS_ROOT . '/js/slick.min.js',
                     'version' => filemtime( TRIPHUB_ASSETS_ROOT_DIR . '/js/slick.min.js' ),
@@ -104,6 +114,10 @@ if( !class_exists('Triphub_Assets') ) {
                     'version' => filemtime( TRIPHUB_ASSETS_ROOT_DIR . '/css/flaticon.css' ),
                 ],
                 'font-awesome' => [
+                    'src'     => TRIPHUB_ASSETS_ROOT . '/css/font-awesome.css',
+                    'version' => filemtime( TRIPHUB_ASSETS_ROOT_DIR . '/css/font-awesome.css' ),
+                ],
+                'font-awesome-pro' => [
                     'src'     => TRIPHUB_ASSETS_ROOT . '/css/font-awesome-pro.css',
                     'version' => filemtime( TRIPHUB_ASSETS_ROOT_DIR . '/css/font-awesome-pro.css' ),
                 ],
@@ -126,6 +140,10 @@ if( !class_exists('Triphub_Assets') ) {
                 'owl-carousel' => [
                     'src'     => TRIPHUB_ASSETS_ROOT . '/css/owl.carousel.css',
                     'version' => filemtime( TRIPHUB_ASSETS_ROOT_DIR . '/css/owl.carousel.css' ),
+                ],
+                'swiper' => [
+                    'src'     => TRIPHUB_ASSETS_ROOT . '/css/swiper-bundle.min.css',
+                    'version' => filemtime( TRIPHUB_ASSETS_ROOT_DIR . '/css/swiper-bundle.min.css' ),
                 ],
                 'slick' => [
                     'src'     => TRIPHUB_ASSETS_ROOT . '/css/slick.css',

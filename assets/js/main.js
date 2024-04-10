@@ -56,45 +56,25 @@
     }
   });
 
-  
-  // Portfolio Slider
-
-  $(".project-wrapper").owlCarousel({
-    items: 1,
-    margin: 30,
-    dots: true,
-    nav: false,
+  // Hero Two Slider
+  new Swiper(".triphub-hero-two", {
+    slidesPerView: 1,
+    speed: 1500,
+    spaceBetween: 0,
     loop: true,
-    autoplay: true,
-    responsiveClass: true,
-    responsive: {
-      0: {
-        items: 1,
-        nav: false,
-        dots: false,
-      },
-
-      575: {
-        items: 1,
-        nav: false,
-        dots: false,
-      },
-
-      767: {
-        items: 2,
-        nav: false,
-        dots: false,
-      },
-
-      990: {
-        items: 3,
-        loop: true,
-      },
-      1200: {
-        items: 4,
-        dots: true,
-        loop: true,
-      },
+    effect: "fade",
+    centeredSlides: true,
+    roundLengths: true,
+    fadeEffect: {
+      crossFade: true,
+    },
+    autoplay: {
+      delay: 7000,
+    },
+    pagination: {
+      el: ".hero-one-pagination",
+      type: "bullets",
+      clickable: true,
     },
   });
 
@@ -103,6 +83,7 @@
   $(".testimonial-wrap").owlCarousel({
     items: 1,
     margin: 30,
+    animateOut: 'fadeOut',
     dots: true,
     nav: false,
     loop: true,
