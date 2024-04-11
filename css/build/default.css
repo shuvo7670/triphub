@@ -1298,11 +1298,15 @@ object {
   margin-bottom: 0;
 }
 #secondary p.wp-block-tag-cloud a {
-  background: var(--triphub-primary-color);
-  color: #ffffff;
+  border: 1px solid var(--triphub-primary-color);
+  border-radius: 5px;
+  background: transparent;
+  color: #6432e3;
+  border-radius: 3px;
+  padding: 5px 10px;
 }
 #secondary p.wp-block-tag-cloud a:hover {
-  background: var(--triphub-secondary-color);
+  background: var(--primary-color);
   color: #ffffff;
 }
 #secondary .wp-block-read-more {
@@ -8016,7 +8020,7 @@ button.swiper-pagination-bullet {
 .search.archive-layout-one article.hentry .svg-holder {
   margin-bottom: 15px;
 }
-.blog.blog-layout-one article.hentry:last-of-type, .blog.archive-layout-one article.hentry:last-of-type,
+.blog.archive-layout-one article.hentry:last-of-type,
 .archive.blog-layout-one article.hentry:last-of-type,
 .archive.archive-layout-one article.hentry:last-of-type,
 .search.blog-layout-one article.hentry:last-of-type,

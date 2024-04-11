@@ -67,7 +67,7 @@ h3 {
 a {
   text-decoration: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 400;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1033,6 +1033,10 @@ input.form-control {
 .about-list-item {
   margin-top: 30px;
 }
+.about-list-item svg {
+  color: var(--primary-color);
+  margin-right: 8px;
+}
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .about-list-item {
     margin-top: 15px;
@@ -1079,10 +1083,10 @@ input.form-control {
   padding: 40px;
   text-align: center;
   padding-top: 0;
-  margin-bottom: 60px;
+  border-radius: 8px;
 }
 .single-service-wrap .service-icon {
-  background: var(--primary-color);
+  background: #6432e329;
   width: 80px;
   height: 80px;
   border-radius: 5px;
@@ -1090,6 +1094,10 @@ input.form-control {
   align-items: center;
   justify-content: center;
   margin-top: -40px;
+}
+.single-service-wrap .service-icon img {
+  max-width: 40px;
+  min-width: 30px;
 }
 .single-service-wrap h4 {
   font-size: 24px;
