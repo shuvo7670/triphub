@@ -779,20 +779,10 @@ function triphub_footer_bottom(){ ?>
 	<div class="footer-b">
 		<div class="container">             
 			<div class="footer-b-wrap">
-				<div class="site-info">
+				<div class="site-info text-center">
 					<div class="footer-cop">
 						<?php 
 							triphub_get_footer_copyright();
-							if( triphub_pro_is_activated() ){
-								$partials = new triphub_Pro_Partials;
-								$partials->triphub_pro_ed_author_link();
-								$partials->triphub_pro_ed_wp_link();
-							} else {
-								echo '<span class="author-link">'.
-								__( ' TripHub by ', 'triphub' ) .'
-								<a href="' . esc_url( 'https://wptravelengine.com/' ) .'" rel="nofollow" target="_blank">' . esc_html__( 'MD Shakibul Islam', 'triphub' ) . '.</a></span>';
-								printf( esc_html__( '%1$s Powered by %2$s%3$s', 'triphub' ), '<span class="wp-link">', '<a href="'. esc_url( 'https://wordpress.org/', 'triphub' ) .'" rel="nofollow" target="_blank">WordPress</a>.', '</span>' );
-							}
 						?> 
 					</div>
 					<?php if( has_nav_menu( 'footer' ) || current_user_can( 'manage_options' ) || function_exists( 'the_privacy_policy_link' ) ){ ?>

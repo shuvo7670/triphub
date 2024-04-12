@@ -1490,6 +1490,7 @@ footer .wp-block-archives li {
 }
 .widget_travel_booking_toolkit_contact_social_links .contact-list li:not(:last-child) {
   margin-bottom: 10px;
+  display: block;
 }
 .widget_travel_booking_toolkit_contact_social_links .contact-list li svg {
   margin-right: 12px;
@@ -5018,6 +5019,7 @@ a:active {
   margin: 0;
   border-bottom: 1px dashed rgba(var(--triphub-heading-color-rgb), 0.1);
   padding: 0;
+  display: block;
 }
 .mobile-header .primary-navigation ul.primary-menu-wrapper li a,
 .mobile-header .secondary-navigation ul.secondary-menu-wrapper li a {
