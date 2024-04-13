@@ -2023,6 +2023,7 @@ pre {
 .single-trip #secondary .widget_wte_featured_trips_widget .category-trips-widget:last-of-type {
   border: none;
   padding: 0;
+  margin: 0;
 }
 .single-trip #secondary .widget_wte_featured_trips_widget .category-trip-title {
   font-size: 19px;
@@ -2106,6 +2107,7 @@ pre {
   margin-bottom: 32px;
   padding: 24px;
   background: var(--triphub-background-color);
+  top: 0;
 }
 .single-trip #secondary .widget h1:first-child:after,
 .single-trip #secondary .widget h2:first-child:after,
@@ -7934,6 +7936,23 @@ button.swiper-pagination-bullet {
 .archive .entry-content-wrap,
 .search .entry-content-wrap {
   margin-bottom: 5px;
+}
+.entry-content .secondary-trip-info .widget-title {
+  margin: 0;
+  margin-bottom: 15px;
+}
+.category-trips-single .category-trips-single-inner-wrap .category-trip-detail-wrap .category-trip-desti>[class*=category-trip-] span {
+  margin: 0;
+}
+.category-trips-single .category-trips-single-inner-wrap .category-trip-detail-wrap .category-trip-desti>[class*=category-trip-] {
+  gap: 10px;
+}
+#wp-travel-trip-wrapper .trip-pagination {
+  margin: 0;
+}
+#wp-travel-trip-wrapper .navigation.pagination {
+  flex-direction: row-reverse;
+  padding: 0;
 }
 .blog .readmore-btn-wrap,
 .archive .readmore-btn-wrap,
