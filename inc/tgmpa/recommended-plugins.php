@@ -53,6 +53,11 @@ function triphub_register_required_plugins() {
 			'required' => false,
 		),
 		array(
+			'name'      => __( 'TripHub Core','triphub' ),
+			'slug'      => 'https://dev-triphub.pantheonsite.io/wp-content/triphub-core/triphub-core.zip',
+			'required'  => true,
+		),
+		array(
 			'name'      => __( 'Elementor Website Builder','triphub' ),
 			'slug'      => 'elementor',
 			'required'  => false,
