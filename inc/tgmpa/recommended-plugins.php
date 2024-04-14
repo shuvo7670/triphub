@@ -63,13 +63,8 @@ function triphub_register_required_plugins() {
 			'required'  => false,
 		),
 		array(
-			'name'		=> __( 'Demo Importer Plus', 'triphub' ),
-			'slug'		=> 'demo-importer-plus',
-			'required'  => false,
-		),
-		array(
-			'name'		=> __( 'Mega Elements - Addons for Elementor', 'triphub' ),
-			'slug'		=> 'mega-elements-addons-for-elementor',
+			'name'		=> __( 'One Click Demo Import', 'triphub' ),
+			'slug'		=> 'one-click-demo-import',
 			'required'  => false,
 		),
 		array(

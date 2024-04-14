@@ -1488,6 +1488,10 @@ footer .wp-block-archives li {
   list-style: none;
   margin: 0;
 }
+.widget_travel_booking_toolkit_contact_social_links .contact-info p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
 .widget_travel_booking_toolkit_contact_social_links .contact-list li:not(:last-child) {
   margin-bottom: 10px;
   display: block;
@@ -5263,6 +5267,7 @@ a:active {
 /************* Page Header ***********/
 .page-header-top {
   background-color: #e5e5e5;
+  display: none;
 }
 .page-header-top .page-header-wrap {
   padding: 40px 0;
@@ -6110,6 +6115,26 @@ body.single .page-header-top .page-header-wrap {
 .site-footer .footer-wrap-main {
   background: var(--triphub-uf-bg-color);
   padding: 70px 0;
+}
+.site-footer .footer-wrap-main .wpte-trip-category .wpte-trip-category-img-wrap {
+  display: none;
+}
+.site-footer .footer-wrap-main .wte-layout-grid {
+  display: inline-block;
+}
+.site-footer .footer-wrap-main .wte-layout-grid .wpte-trip-category .wpte-trip-category-text-wrap{
+  margin: 0;
+  margin-bottom: 13px;
+}
+.site-footer .footer-wrap-main .wpte-gblock-title-wrap h2{
+  text-align: left;
+  font-size: 1.125em;
+  line-height: 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.site-footer .footer-wrap-main .widget_travel_booking_toolkit_contact_social_links h2{
+  margin-bottom: 15px;
 }
 @media (max-width: 1024px) {
   .site-footer .footer-wrap-main {

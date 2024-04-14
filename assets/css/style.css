@@ -1604,7 +1604,7 @@ ul.service-list li {
 .cp-custom-accordion .accordion-buttons::after {
   position: absolute;
   content: "\f068";
-  font-family: "Line Awesome Free";
+  font-family: "FontAwesome";
   top: 22%;
   transform: rotate(-180deg);
   right: 0;
