@@ -276,11 +276,11 @@ if (!function_exists('triphub_primary_navigation')):
 				<nav id="site-navigation" class="primary-navigation" <?php triphub_microdata('navigation'); ?> <?php echo esc_attr($data_stretch); ?>>
 					<?php
                         wp_nav_menu(array(
-                            'theme_location' => 'primary',
-                            'menu_id' => 'primary-menu',
-                            'menu_class' => 'primary-menu-wrapper',
+                            'theme_location'  => 'primary',
+                            'menu_id'         => 'primary-menu',
+                            'menu_class'      => 'primary-menu-wrapper',
                             'container_class' => 'primary-menu-container',
-                            'fallback_cb' => 'triphub_primary_menu_fallback',
+                            'fallback_cb'     => 'triphub_primary_menu_fallback',
                         ));
                     ?>
 				</nav><!-- #site-navigation -->

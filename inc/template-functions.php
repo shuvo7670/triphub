@@ -777,7 +777,7 @@ if( ! function_exists( 'triphub_footer_bottom' ) ) :
 */
 function triphub_footer_bottom(){ ?>
 	<div class="footer-b">
-		<div class="container">             
+		<div class="container gap-0">             
 			<div class="footer-b-wrap">
 				<div class="site-info text-center">
 					<div class="footer-cop">
