@@ -57,31 +57,6 @@ class triphub_Customizer_Notice_Section extends WP_Customize_Section {
 	public $dismiss_button = '';
 
 	/**
-	 * Check if plugin is installed/activated
-	 *
-	 * @param plugin-slug $slug the plugin slug.
-	 *
-	 * @return array
-	 */
-	public function check_active( $slug ) {
-		if ( file_exists( ABSPATH . 'wp-content/plugins/' . $slug . '/' . $slug . '.php' ) ) {
-			include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-
-			$needs = is_plugin_active( $slug . '/' . $slug . '.php' ) ? 'deactivate' : 'activate';
-
-			return array(
-				'status' => is_plugin_active( $slug . '/' . $slug . '.php' ),
-				'needs' => $needs,
-			);
-		}
-
-		return array(
-			'status' => false,
-			'needs' => 'install',
-		);
-	}
-
-	/**
 	 * Create the install/activate button link for plugins
 	 *
 	 * @param plugin-state $state The plugin state (not installed/inactive/active).
@@ -136,7 +111,7 @@ class triphub_Customizer_Notice_Section extends WP_Customize_Section {
 	 * @return mixed
 	 */
 	public function call_plugin_api( $slug ) {
-		include_once( ABSPATH . 'wp-admin/includes/plugin-install.php' );
+		get_template_part( ABSPATH . 'wp-admin/includes/plugin-install.php' );
 		$call_api = get_transient( 'triphub_cust_notice_plugin_info_' . $slug );
 		if ( false === $call_api ) {
 			$call_api = plugins_api(
@@ -196,8 +171,8 @@ class triphub_Customizer_Notice_Section extends WP_Customize_Section {
 				continue;
 			}
 
-			$active = $this->check_active( $slug );
-
+			$active = [];
+			$active['needs'] = 'install';
 			if ( ! empty( $active['needs'] ) && ( $active['needs'] == 'deactivate' ) ) {
 				continue;
 			}

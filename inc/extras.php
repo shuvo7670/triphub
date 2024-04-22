@@ -51,7 +51,7 @@ if (!function_exists('triphub_posted_by')):
         /* translators: %s: post author. */
         esc_html('%s') , '<span class="author vcard"><a class="url fn n" href="' . esc_url(get_author_posts_url(get_the_author_meta('ID', $author_id))) . '" itemprop="url"><span itemprop="name">' . esc_html(get_the_author_meta('display_name', $author_id)) . '</span></a></span>'); ?>
 		<span class="posted-by author vcard meta-common" <?php triphub_microdata('person'); ?>>
-			<?php echo $byline; ?>
+			<?php echo sprintf('%s', $byline); ?>
 		</span>
 	<?php
     }
@@ -250,9 +250,7 @@ if (!function_exists('triphub_site_branding')):
         }
         $triphub_description = get_bloginfo('description', 'display');
         if ($triphub_description || is_customize_preview()) { ?>
-						<p class="site-description" itemprop="description"><?php echo $triphub_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-            
-            ?></p>
+						<p class="site-description" itemprop="description"><?php echo sprintf('%s', $triphub_description);?></p>
 					<?php
         } ?>
 				</div>
@@ -556,7 +554,7 @@ if (!function_exists('triphub_comment_callback')):
             $tag = 'li';
             $add_below = 'div-comment';
         } ?>
-			<<?php echo $tag ?> <?php comment_class(empty($args['has_children']) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
+			<<?php echo sprintf('%s', $tag ) ?> <?php comment_class(empty($args['has_children']) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
 
 				<?php if ('div' != $args['style']): ?>
 					<article id="div-comment-<?php comment_ID() ?>" class="comment-body" <?php triphub_microdata('comment-body'); ?>>
@@ -660,14 +658,14 @@ if (!function_exists('triphub_breadcrumb')):
 
             if (is_home()) {
                 $depth = 2;
-                echo $before . '<a itemprop="item" href="' . esc_url(get_the_permalink()) . '"><span itemprop="name">' . esc_html(single_post_title('', false)) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                echo sprint('%s', $before) . '<a itemprop="item" href="' . esc_url(get_the_permalink()) . '"><span itemprop="name">' . esc_html(single_post_title('', false)) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
             }
             elseif (is_category()) {
                 $depth = 2;
                 $thisCat = get_category(get_query_var('cat') , false);
                 if ($show_front === 'page' && $post_page) { //If static blog post page is set
                     $p = get_post($post_page);
-                    echo '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="' . esc_url(get_permalink($post_page)) . '" itemprop="item"><span itemprop="name">' . esc_html($p->post_title) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $delimiter . '</span>';
+                    echo '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="' . esc_url(get_permalink($post_page)) . '" itemprop="item"><span itemprop="name">' . esc_html($p->post_title) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . sprintf('%s', $delimiter) . '</span>';
                     $depth++;
                 }
                 if ($thisCat->parent != 0) {
@@ -683,7 +681,7 @@ if (!function_exists('triphub_breadcrumb')):
                         }
                     }
                 }
-                echo $before . '<a itemprop="item" href="' . esc_url(get_term_link($thisCat->term_id)) . '"><span itemprop="name">' . esc_html(single_cat_title('', false)) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                echo sprint('%s', $before) . '<a itemprop="item" href="' . esc_url(get_term_link($thisCat->term_id)) . '"><span itemprop="name">' . esc_html(single_cat_title('', false)) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
             }
             elseif (triphub_is_wpte_activated() && is_tax(array(
                 'activities',
@@ -731,23 +729,23 @@ if (!function_exists('triphub_breadcrumb')):
                     }
                 }
 
-                echo $before . '<a itemprop="item" href="' . esc_url(get_term_link($current_term->term_id)) . '"><span itemprop="name">' . esc_html($current_term->name) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                echo sprint('%s', $before) . '<a itemprop="item" href="' . esc_url(get_term_link($current_term->term_id)) . '"><span itemprop="name">' . esc_html($current_term->name) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
             }
             elseif (is_tag()) {
                 $depth = 2;
                 $queried_object = get_queried_object();
-                echo $before . '<a itemprop="item" href="' . esc_url(get_term_link($queried_object->term_id)) . '"><span itemprop="name">' . esc_html(single_tag_title('', false)) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                echo sprint('%s', $before) . '<a itemprop="item" href="' . esc_url(get_term_link($queried_object->term_id)) . '"><span itemprop="name">' . esc_html(single_tag_title('', false)) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
             }
             elseif (is_author()) {
                 global $author;
                 $depth = 2;
                 $userdata = get_userdata($author);
-                echo $before . '<a itemprop="item" href="' . esc_url(get_author_posts_url($author)) . '"><span itemprop="name">' . esc_html($userdata->display_name) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                echo sprint('%s', $before) . '<a itemprop="item" href="' . esc_url(get_author_posts_url($author)) . '"><span itemprop="name">' . esc_html($userdata->display_name) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
             }
             elseif (is_search()) {
                 $depth = 2;
-                $request_uri = $_SERVER['REQUEST_URI'];
-                echo $before . '<a itemprop="item" href="' . esc_url($request_uri) . '"><span itemprop="name">' . sprintf(__('Search Results for "%s"', 'triphub') , esc_html(get_search_query())) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                $request_uri = get_permalink();
+                echo sprint('%s', $before) . '<a itemprop="item" href="' . esc_url($request_uri) . '"><span itemprop="name">' . sprintf(__('Search Results for "%s"', 'triphub') , esc_html(get_search_query())) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
             }
             elseif (is_day()) {
                 $depth = 2;
@@ -755,17 +753,17 @@ if (!function_exists('triphub_breadcrumb')):
                 $depth++;
                 echo '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="' . esc_url(get_month_link(get_the_time(__('Y', 'triphub')) , get_the_time(__('m', 'triphub')))) . '" itemprop="item"><span itemprop="name">' . esc_html(get_the_time(__('F', 'triphub'))) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $delimiter . '</span>';
                 $depth++;
-                echo $before . '<a itemprop="item" href="' . esc_url(get_day_link(get_the_time(__('Y', 'triphub')) , get_the_time(__('m', 'triphub')) , get_the_time(__('d', 'triphub')))) . '"><span itemprop="name">' . esc_html(get_the_time(__('d', 'triphub'))) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                echo sprint('%s', $before) . '<a itemprop="item" href="' . esc_url(get_day_link(get_the_time(__('Y', 'triphub')) , get_the_time(__('m', 'triphub')) , get_the_time(__('d', 'triphub')))) . '"><span itemprop="name">' . esc_html(get_the_time(__('d', 'triphub'))) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
             }
             elseif (is_month()) {
                 $depth = 2;
                 echo '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="' . esc_url(get_year_link(get_the_time(__('Y', 'triphub')))) . '" itemprop="item"><span itemprop="name">' . esc_html(get_the_time(__('Y', 'triphub'))) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $delimiter . '</span>';
                 $depth++;
-                echo $before . '<a itemprop="item" href="' . esc_url(get_month_link(get_the_time(__('Y', 'triphub')) , get_the_time(__('m', 'triphub')))) . '"><span itemprop="name">' . esc_html(get_the_time(__('F', 'triphub'))) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                echo sprint('%s', $before) . '<a itemprop="item" href="' . esc_url(get_month_link(get_the_time(__('Y', 'triphub')) , get_the_time(__('m', 'triphub')))) . '"><span itemprop="name">' . esc_html(get_the_time(__('F', 'triphub'))) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
             }
             elseif (is_year()) {
                 $depth = 2;
-                echo $before . '<a itemprop="item" href="' . esc_url(get_year_link(get_the_time(__('Y', 'triphub')))) . '"><span itemprop="name">' . esc_html(get_the_time(__('Y', 'triphub'))) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                echo sprint('%s', $before) . '<a itemprop="item" href="' . esc_url(get_year_link(get_the_time(__('Y', 'triphub')))) . '"><span itemprop="name">' . esc_html(get_the_time(__('Y', 'triphub'))) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
             }
             elseif (is_single() && !is_attachment()) {
                 $depth = 2;
@@ -789,7 +787,7 @@ if (!function_exists('triphub_breadcrumb')):
                                 ->labels->archive_title : $post_type
                                 ->labels->name;
                             printf('<itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a itemprop="item" href="%1$s"><span itemprop="name">%2$s</span></a><meta itemprop="position" content="' . absint($depth) . '" />', esc_url(get_post_type_archive_link(get_post_type())) , $label);
-                            echo $delimiter;
+                            echo sprintf( '%s', $delimiter );
                         }
                     }
                     // Check for destination taxonomy hierarchy
@@ -813,7 +811,7 @@ if (!function_exists('triphub_breadcrumb')):
                         $depth++;
                     }
 
-                    echo $before . '<a href="' . esc_url(get_the_permalink()) . '" itemprop="item"><span itemprop="name">' . esc_html(get_the_title()) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                    echo sprint('%s', $before) . '<a href="' . esc_url(get_the_permalink()) . '" itemprop="item"><span itemprop="name">' . esc_html(get_the_title()) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
                 }
                 elseif (get_post_type() != 'post') {
                     $post_type = get_post_type_object(get_post_type());
@@ -827,7 +825,7 @@ if (!function_exists('triphub_breadcrumb')):
                         echo '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="' . esc_url(get_post_type_archive_link(get_post_type())) . '" itemprop="item"><span itemprop="name">' . esc_html($label) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $delimiter . '</span>';
                         $depth++;
                     }
-                    echo $before . '<a href="' . esc_url(get_the_permalink()) . '" itemprop="item"><span itemprop="name">' . esc_html(get_the_title()) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                    echo sprint('%s', $before) . '<a href="' . esc_url(get_the_permalink()) . '" itemprop="item"><span itemprop="name">' . esc_html(get_the_title()) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
                 }
                 else { //For Post
                     $cat_object = get_the_category();
@@ -862,7 +860,7 @@ if (!function_exists('triphub_breadcrumb')):
                             }
                         }
                     }
-                    echo $before . '<a itemprop="item" href="' . esc_url(get_the_permalink()) . '"><span itemprop="name">' . esc_html(get_the_title()) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                    echo sprint('%s', $before) . '<a itemprop="item" href="' . esc_url(get_the_permalink()) . '"><span itemprop="name">' . esc_html(get_the_title()) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
                 }
             }
             elseif (!is_single() && !is_page() && get_post_type() != 'post' && !is_404()) { //For Custom Post Archive
@@ -870,20 +868,20 @@ if (!function_exists('triphub_breadcrumb')):
                 $post_type = get_post_type_object(get_post_type());
                 if (get_query_var('paged')) {
                     echo '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="' . esc_url(get_post_type_archive_link($post_type->name)) . '" itemprop="item"><span itemprop="name">' . esc_html($post_type->label) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $delimiter . '/</span>';
-                    echo $before . sprintf(__('Page %s', 'triphub') , get_query_var('paged')) . $after; //@todo need to check this
+                    echo sprint('%s', $before) . sprintf(__('Page %s', 'triphub') , get_query_var('paged')) . $after; //@todo need to check this
                     
                 }
                 else {
-                    echo $before . '<a itemprop="item" href="' . esc_url(get_post_type_archive_link($post_type->name)) . '"><span itemprop="name">' . esc_html($post_type->label) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                    echo sprint('%s', $before) . '<a itemprop="item" href="' . esc_url(get_post_type_archive_link($post_type->name)) . '"><span itemprop="name">' . esc_html($post_type->label) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
                 }
             }
             elseif (is_attachment()) {
                 $depth = 2;
-                echo $before . '<a itemprop="item" href="' . esc_url(get_the_permalink()) . '"><span itemprop="name">' . esc_html(get_the_title()) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                echo sprint('%s', $before) . '<a itemprop="item" href="' . esc_url(get_the_permalink()) . '"><span itemprop="name">' . esc_html(get_the_title()) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
             }
             elseif (is_page() && !$post->post_parent) {
                 $depth = 2;
-                echo $before . '<a itemprop="item" href="' . esc_url(get_the_permalink()) . '"><span itemprop="name">' . esc_html(get_the_title()) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                echo sprint('%s', $before) . '<a itemprop="item" href="' . esc_url(get_the_permalink()) . '"><span itemprop="name">' . esc_html(get_the_title()) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
             }
             elseif (is_page() && $post->post_parent) {
                 $depth = 2;
@@ -899,11 +897,11 @@ if (!function_exists('triphub_breadcrumb')):
                     echo '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="' . esc_url(get_permalink($breadcrumbs[$i])) . '" itemprop="item"><span itemprop="name">' . esc_html(get_the_title($breadcrumbs[$i])) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $delimiter . '</span>';
                     $depth++;
                 }
-                echo $before . '<a href="' . get_permalink() . '" itemprop="item"><span itemprop="name">' . esc_html(get_the_title()) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" /></span>' . $after;
+                echo sprint('%s', $before) . '<a href="' . get_permalink() . '" itemprop="item"><span itemprop="name">' . esc_html(get_the_title()) . '</span></a><meta itemprop="position" content="' . absint($depth) . '" /></span>' . $after;
             }
             elseif (is_404()) {
                 $depth = 2;
-                echo $before . '<a itemprop="item" href="' . esc_url(home_url()) . '"><span itemprop="name">' . esc_html__('404 Error - Page Not Found', 'triphub') . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
+                echo sprint('%s', $before) . '<a itemprop="item" href="' . esc_url(home_url()) . '"><span itemprop="name">' . esc_html__('404 Error - Page Not Found', 'triphub') . '</span></a><meta itemprop="position" content="' . absint($depth) . '" />' . $after;
             }
 
             if (get_query_var('paged')) printf(__(' (Page %s)', 'triphub') , get_query_var('paged')); ?>

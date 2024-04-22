@@ -46,7 +46,8 @@ if( ! class_exists( 'Triphub_Text_Control' ) ){
                                 <label for="<?php echo esc_attr( $input_id ); ?>" class="customize-control-title"><?php echo esc_html( $this->label ); ?></label>
                             <?php endif; ?>
                             <?php if ( ! empty( $this->description ) ) : ?>
-                                <span id="<?php echo esc_attr( $description_id ); ?>" class="description customize-control-description"><?php echo $this->description; ?></span>
+                                <span id="<?php echo esc_attr( $description_id ); ?>" class="description customize-control-description">
+                                <?php echo sprintf( '%s', $this->description ) ; ?></span>
                             <?php endif; ?>
                             <input
                                 type="text"
@@ -62,12 +63,13 @@ if( ! class_exists( 'Triphub_Text_Control' ) ){
                                 <label for="<?php echo esc_attr( $input_id ); ?>" class="customize-control-title"><?php echo esc_html( $this->label ); ?></label>
                             <?php endif; ?>
                             <?php if ( ! empty( $this->description ) ) : ?>
-                                <span id="<?php echo esc_attr( $description_id ); ?>" class="description customize-control-description"><?php echo $this->description; ?></span>
+                                <span id="<?php echo esc_attr( $description_id ); ?>" class="description customize-control-description">
+                                <?php echo sprintf( '%s', $this->description ); ?></span>
                             <?php endif; ?>
                             <textarea
                                 id="<?php echo esc_attr( $input_id ); ?>"
                                 rows="5"
-                                <?php echo $describedby_attr; ?>
+                                <?php echo sprintf( '%s', $describedby_attr ); ?>
                                 <?php $this->input_attrs(); ?>
                                 <?php $this->link(); ?>
                             ><?php echo esc_textarea( $this->value() ); ?></textarea>

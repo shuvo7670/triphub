@@ -290,7 +290,7 @@ if ( ! class_exists( 'triphub_WebFont_Loader' ) ) {
 
 			// If the fonts folder don't exist, create it.
 			if ( ! file_exists( $this->get_fonts_folder() ) ) {
-				$this->get_filesystem()->mkdir( $this->get_fonts_folder(), FS_CHMOD_DIR );
+				$this->get_filesystem()->wp_mkdir_p( $this->get_fonts_folder(), FS_CHMOD_DIR );
 			}
 
 			foreach ( $font_files as $font_family => $files ) {
@@ -300,7 +300,7 @@ if ( ! class_exists( 'triphub_WebFont_Loader' ) ) {
 
 				// If the folder doesn't exist, create it.
 				if ( ! file_exists( $folder_path ) ) {
-					$this->get_filesystem()->mkdir( $folder_path, FS_CHMOD_DIR );
+					$this->get_filesystem()->wp_mkdir_p( $folder_path, FS_CHMOD_DIR );
 				}
 
 				foreach ( $files as $url ) {
@@ -450,7 +450,7 @@ if ( ! class_exists( 'triphub_WebFont_Loader' ) ) {
 
 			// If the folder doesn't exist, create it.
 			if ( ! file_exists( $this->get_fonts_folder() ) ) {
-				$this->get_filesystem()->mkdir( $this->get_fonts_folder(), FS_CHMOD_DIR );
+				$this->get_filesystem()->wp_mkdir_p( $this->get_fonts_folder(), FS_CHMOD_DIR );
 			}
 
 			// If the file doesn't exist, create it. Return false if it can not be created.

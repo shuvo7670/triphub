@@ -6,9 +6,9 @@
  */
 
 /**
- * Class triphub_Plugin_Install_Helper
+ * Class Triphub_Plugin_Install_Helper
  */
-class triphub_Plugin_Install_Helper {
+class Triphub_Plugin_Install_Helper {
 	/**
 	 * Instance of class.
 	 *
@@ -19,11 +19,11 @@ class triphub_Plugin_Install_Helper {
 	/**
 	 * Check if instance already exists.
 	 *
-	 * @return triphub_Plugin_Install_Helper
+	 * @return Triphub_Plugin_Install_Helper
 	 */
 	public static function instance() {
-		if ( ! isset( self::$instance ) && ! ( self::$instance instanceof triphub_Plugin_Install_Helper ) ) {
-			self::$instance = new triphub_Plugin_Install_Helper;
+		if ( ! isset( self::$instance ) && ! ( self::$instance instanceof Triphub_Plugin_Install_Helper ) ) {
+			self::$instance = new Triphub_Plugin_Install_Helper;
 		}
 
 		return self::$instance;
@@ -38,7 +38,7 @@ class triphub_Plugin_Install_Helper {
 	 */
 	public function get_button_html( $slug ) {
 		$button = '';
-		$state  = $this->check_plugin_state( $slug );
+		$state  = null;
 		if ( ! empty( $slug ) ) {
 
 			$button .= '<div class=" plugin-card-' . esc_attr( $slug ) . '" style="padding: 8px 0 5px;">';
@@ -79,22 +79,6 @@ class triphub_Plugin_Install_Helper {
 		}// End if().
 
 		return $button;
-	}
-
-	/**
-	 * Check plugin state.
-	 *
-	 * @param string $slug plugin slug.
-	 *
-	 * @return bool
-	 */
-	private function check_plugin_state( $slug ) {
-		if ( file_exists( ABSPATH . 'wp-content/plugins/' . $slug . '/' . $slug . '.php' ) || file_exists( ABSPATH . 'wp-content/plugins/' . $slug . '/index.php' ) ) {
-			$needs = ( is_plugin_active( $slug . '/' . $slug . '.php' ) || is_plugin_active( $slug . '/index.php' ) ) ? 'deactivate' : 'activate';
-			return $needs;
-		} else {
-			return 'install';
-		}
 	}
 
 	/**

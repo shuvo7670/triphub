@@ -417,7 +417,7 @@ class triphub_Social_Lists{
                             if( !empty( $value ) && $key == $link ){
                                 ?>
                                     <li>
-                                    <a href="<?php if( isset( $value ) ) echo esc_url( $value ); ?>" target="<?php echo $ed_social_media_newtab ? '_blank': '_self'; ?>" rel="nofollow noopener">
+                                    <a href="<?php if( isset( $value ) ) echo esc_url( $value ); ?>" target="<?php echo !empty($ed_social_media_newtab) ? '_blank': '_self'; ?>" rel="nofollow noopener">
                                         <?php echo wp_kses( $this->triphub_lists_all_svgs( $actualsocialkey ), triphub_get_kses_extended_ruleset() ); ?>
                                     </a>
                                 </li>  

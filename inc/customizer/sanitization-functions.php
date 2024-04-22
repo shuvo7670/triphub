@@ -187,7 +187,7 @@ if( ! function_exists( 'triphub_sanitize_code' ) ) :
  * Sanitize image
  */
 function triphub_sanitize_code( $value ){
-    return htmlspecialchars_decode( stripslashes( $value ) );
+    return wp_specialchars_decode( stripslashes( $value ) );
 }
 endif;
 

@@ -9,7 +9,7 @@ if( ! class_exists( 'WP_Customize_Control' ) ){
 	return null;
 }
 
-if( ! class_exists( 'triphub_Plugin_Install_Helper' ) ){
+if( ! class_exists( 'Triphub_Plugin_Install_Helper' ) ){
 	return;
 }
 
@@ -29,7 +29,7 @@ class triphub_Plugin_Recommend_Control extends WP_Customize_Control {
 	 * Enqueue function.
 	 */
 	public function enqueue() {
-		triphub_Plugin_Install_Helper::instance()->enqueue_scripts();
+		Triphub_Plugin_Install_Helper::instance()->enqueue_scripts();
 	}
 
 	/**
@@ -47,7 +47,8 @@ class triphub_Plugin_Recommend_Control extends WP_Customize_Control {
 			</span>
 		<?php }
 
-		echo $this->create_plugin_install_button($this->slug);
+		$instll_btn = $this->create_plugin_install_button($this->slug);
+		echo sprintf( '%s', $instll_btn );
 	}
 
 	/**
@@ -58,6 +59,6 @@ class triphub_Plugin_Recommend_Control extends WP_Customize_Control {
 	 * @return bool
 	 */
 	public function create_plugin_install_button($slug) {
-		return triphub_Plugin_Install_Helper::instance()->get_button_html($slug);
+		return Triphub_Plugin_Install_Helper::instance()->get_button_html($slug);
 	}
 }

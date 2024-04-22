@@ -2210,6 +2210,10 @@ ul.service-list li {
     border-radius: 5px 5px 0 0;
     height: 240px;
     object-fit: cover;
+    width: 100%;
+}
+.wpte_empty-items-box a.wpte_all-trips-btn {
+  margin-top: 10px;
 }
 .blog-content-wrap .blog-meta span i {
   color: #013B4F;

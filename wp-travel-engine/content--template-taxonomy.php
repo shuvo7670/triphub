@@ -54,7 +54,7 @@
                     <div class="page-content">
                         <?php
                                 $content = apply_filters( 'the_content', $post->post_content );
-                                echo $content;
+                                echo sprintf('%s', $content);
                         ?>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                     <div class="page-content">
                         <?php
                             $content = apply_filters( 'the_content', $post->post_content );
-                            echo $content;
+                            echo  sprintf('%s', $content);
                         ?>
                     </div>
 				</div>

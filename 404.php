@@ -13,7 +13,7 @@ $bg_style 	 = (!empty( $error_image ) ) ? 'style="background-image: url(' . esc_
 get_header();
 ?>
 <div class="site-content">
-	<div class="fourofour-main-wrap"<?php echo ( $bg_style ); ?>>
+	<div class="fourofour-main-wrap"<?php echo sprintf( '%s', $bg_style ); ?>>
 		<div class="main-content-wrapper">
 			<div class="container">
 				<div class="error-content">
