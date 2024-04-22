@@ -59,10 +59,6 @@ require get_template_directory() . '/inc/defaults.php';
 require get_template_directory() . '/inc/widgets.php';
 
 /**
- * Metabox
- */
-require get_template_directory() . '/inc/metabox/metabox.php';
-/**
  * Social Links
  */
 require get_template_directory() . '/inc/social-links.php';
