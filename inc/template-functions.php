@@ -25,6 +25,16 @@ function triphub_head(){ ?>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<div class="triphub-preloader-wrapper">
+		<div class="triphub-preloader-layout">
+			<div class="triphub-preloader-grid">
+				<div class="item1"></div>
+				<div class="item2"></div>
+				<div class="item3"></div>
+				<div class="item4"></div>
+			</div>
+		</div>
+    </div>
 	<?php
 }
 endif;

@@ -1,6 +1,11 @@
 (function ($) {
   "use strict";
 
+  //Preloader
+  jQuery(window).on('load', function () {
+    $(".triphub-preloader-wrapper").delay(1600).fadeOut("slow");
+  });
+  
   // Offcanvas menu
   $(".header-btn").on("click", function () {
     $(".extra-info,.offcanvas-overlay").addClass("active");

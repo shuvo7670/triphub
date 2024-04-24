@@ -519,7 +519,7 @@ li {
   .section-title h2 {
     font-size: 28px;
     line-height: 38px;
-    margin: 20px 0;
+    margin: 0;
   }
 }
 
@@ -546,6 +546,72 @@ li {
     font-size: 14px;
   }
 }
+
+.loading #tourFilterData {
+  opacity: 0.3;
+}
+.triphub-preloader-wrapper {
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed !important;
+  z-index: 999999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+}
+.loading .triphub-preloader {
+  display: block;
+} 
+.triphub-preloader {
+  position: relative;
+  left: 50%;
+  top: 350px;
+  width: 100px;
+  border: 3px dotted #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+  transform: translateX(-50%);
+  display: none;
+}
+.triphub-preloader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px dotted var(--primary-color);
+  border-style: solid solid dotted;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  animation: rotationBack 1s linear infinite;
+  transform-origin: center center;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+ }
+  100% {
+    transform: rotate(360deg);
+ }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+ }
+  100% {
+    transform: rotate(-360deg);
+ }
+}
+
+
+/* Main CSS  */
 .triphub-hero-two-pagination {
   width: 100%;
 }
@@ -886,7 +952,8 @@ input.form-control {
 }
 @media screen and (max-width: 768px) {
   #primary .hero-area-two .hero-area-content h2 { 
-    font-size: 50px;
+    font-size: 35px;
+    margin-top: 15px;
   }
 }
 .hero-area-content {
@@ -973,6 +1040,15 @@ input.form-control {
   height: 500px;
   object-fit: cover;
   border-radius: 50%;
+}
+@media (max-width: 540px) {
+  .about-img-wrap {
+    text-align: center;
+  }
+  .about-section .about-img-wrap img {
+    width: 300px;
+    height: 300px;
+  }
 }
 .about-section .about-content-wrap .about-title h2 {
   font-size: 42px;
@@ -1084,6 +1160,14 @@ input.form-control {
   text-align: center;
   padding-top: 0;
   border-radius: 8px;
+}
+@media (max-width: 991px) {
+  .single-service-wrap {
+    margin-bottom: 60px;
+  }
+  .service-section .row .col-sm-6:last-child .single-service-wrap {
+    margin-bottom: 0;
+  }
 }
 .single-service-wrap .service-icon {
   background: #6432e329;
@@ -2427,4 +2511,66 @@ ul.service-list li {
 .blog-page .single-blog-item:hover .read-more-btn {
   background: #013B4F;
   color: #fff;
+}
+
+
+
+/* Preloader CSS  */ 
+.triphub-preloader-wrapper .triphub-preloader-layout
+{
+  margin: auto;
+  display: flex;
+  width: 250px;
+  justify-content: center;
+}
+.triphub-preloader-wrapper .triphub-preloader-grid
+{
+  margin: auto;
+  margin-right: 1px;
+  width: 80px;
+  height: 80px;
+  display: grid;
+  gap: 0px;
+  grid-template-columns: auto auto;
+  animation: rotate 2s linear 0s infinite;
+  position: absolute;
+  top: 50%;
+}
+.triphub-preloader-wrapper  .triphub-preloader-grid .item1
+{
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 0%;
+  background: var(--primary-color);
+}
+.triphub-preloader-wrapper  .triphub-preloader-grid .item2
+{
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 0%;
+  background: var(--primary-color);
+}
+.triphub-preloader-wrapper  .triphub-preloader-grid  .item3
+{
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 0%;
+  background: var(--primary-color);
+}
+.triphub-preloader-wrapper  .triphub-preloader-grid  .item4
+{
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 0%;
+  background: var(--primary-color);
+}
+@keyframes rotate 
+{
+  0%{rotate: 0deg; transform: scale(0.6);}
+  50%{ rotate: 100deg; transform: scale(0.4);}    
+  100%{rotate: 360deg; transform: scale(0.6);}
 }

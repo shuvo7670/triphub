@@ -295,7 +295,7 @@ if (!function_exists('triphub_primary_menu_fallback')):
      */
     function triphub_primary_menu_fallback() {
         if (current_user_can('manage_options')) {
-            echo '<ul id="primary-menu" class="menu">';
+            echo '<ul id="primary-menu-wrap" class="menu">';
             echo '<li><a href="' . esc_url(admin_url('nav-menus.php')) . '">' . esc_html__('Click here to add a menu', 'triphub') . '</a></li>';
             echo '</ul>';
         }
@@ -314,7 +314,7 @@ if (!function_exists('triphub_secondary_navigation')):
         }
         if (has_nav_menu('secondary') || current_user_can('manage_options')) { ?>
 			<div class="triphub-nav-wrapper">
-				<nav id="site-navigation" class="secondary-navigation" <?php triphub_microdata('navigation'); ?>>
+				<nav id="site-navigation-secondary" class="secondary-navigation" <?php triphub_microdata('navigation'); ?>>
 					<?php
             wp_nav_menu(array(
                 'theme_location' => 'secondary',
@@ -924,7 +924,7 @@ if (!function_exists('triphub_header_search')):
                 <div class="search-form-section">
                     <button class="header-search-btn" data-toggle-target=".search-modal" data-toggle-body-class="showing-search-modal" data-set-focus=".search-modal .search-field" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="13.532" height="13.532" viewBox="0 0 13.532 13.532">
-                            <path id="search" d="M31.575,30.447,28.1,26.97A5.6,5.6,0,1,0,26.97,28.1l3.477,3.477ZM19.639,23.629a3.99,3.99,0,1,1,3.99,3.99A3.995,3.995,0,0,1,19.639,23.629Z" transform="translate(-18.043 -18.043)" />
+                            <path d="M31.575,30.447,28.1,26.97A5.6,5.6,0,1,0,26.97,28.1l3.477,3.477ZM19.639,23.629a3.99,3.99,0,1,1,3.99,3.99A3.995,3.995,0,0,1,19.639,23.629Z" transform="translate(-18.043 -18.043)" />
                         </svg>
                     </button>
                     <div class="search-toggle-form search-modal cover-modal" data-modal-target-string=".search-modal">
