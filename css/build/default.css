@@ -571,7 +571,7 @@ Common Site Style
 }
 .comments-area ol.comment-list li {
   border-bottom: 1px solid rgba(var(--triphub-heading-color-rgb), 0.05);
-  margin: 0 0 40px;
+  margin: 0 0 10px;
 }
 .comments-area ol.comment-list li:last-child {
   border-bottom: none;
@@ -1051,9 +1051,49 @@ h6 {
 }
 .entry-content-wrap ul,
 .entry-content-wrap ol {
-  padding: 0 0 0 1.25em;
+  padding: 0;
+  margin:5px 0;
+}
+.entry-content-wrap .wp-block-post-template.wp-block-post-template-is-layout-flow h2{
+  font-size: 25px;
+}
+.entry-content-wrap .wp-block-post-template.wp-block-post-template-is-layout-flow li{
+  margin-right: 15px;
+}
+.entry-content-wrap .wp-block-query-pagination {
+  margin-bottom: 10px;
+}
+.entry-content-wrap .wp-block-query-pagination .page-numbers.current{
+  padding: 8px 15px;
+  background: var(--triphub-secondary-color);
+  max-width: 40px;
+  min-height: 40px;
+  font-size: 1.125em;
+  color: #fff;
+}
+.entry-content-wrap .wp-block-query-pagination .page-numbers{
+  color: var(--triphub-heading-color-rgb);
+  margin: 0 5px;
 }
 
+.entry-content-wrap .page-links {
+  margin-top: 10px;
+}
+.entry-content-wrap .page-links .post-page-numbers.current {
+  padding: 4px 8px;
+  background: var(--triphub-secondary-color);
+  max-width: 40px;
+  min-height: 40px;
+  font-size: 1.125em;
+  color: #fff;
+}
+.entry-content-wrap .page-links .post-page-numbers{
+  color: var(--triphub-heading-color-rgb);
+  margin: 0 5px;
+}
+.triphub-post.triphub-single .post-tags-wrap {
+  margin-top: 15px;
+}
 p {
   margin: 0 0 20px;
 }
@@ -8052,6 +8092,7 @@ button.swiper-pagination-bullet {
 .search.blog-layout-one article.hentry .entry-title a,
 .search.archive-layout-one article.hentry .entry-title a {
   font-size: 0.8em;
+  word-break: break-all;
 }
 .blog.blog-layout-one article.hentry .post-thumbnail,
 .blog.blog-layout-one article.hentry .svg-holder, .blog.archive-layout-one article.hentry .post-thumbnail,

@@ -318,7 +318,7 @@ function triphub_navigation(){
 					<?php if( $prev_post ){ ?>
 						<div class="nav-holder nav-previous">
 							<div class="meta-nav"><a href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>"><?php esc_html_e( 'Previous Article', 'triphub' ); ?></a></div>
-							<span class="entry-title"><a href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>"><?php echo esc_html( get_the_title( $prev_post->ID ) ); ?></a></span>
+							<span class="entry-title"><a href="<?php echo esc_url( get_permalink( $prev_post->ID ) ); ?>"><?php echo wp_kses_post( get_the_title( $prev_post->ID ) ); ?></a></span>
 						</div>
 					<?php } if( $next_post ){ ?>
 						<div class="nav-holder nav-next">
@@ -658,7 +658,6 @@ function triphub_related_post_location(){
 	$defaults 			   = triphub_get_general_defaults();
 	$related_post_location = get_theme_mod( 'related_posts_location', $defaults['related_posts_location']  );
 	$location_hook 	  	   = $related_post_location === 'below' ? 'triphub_after_post_loop' : 'triphub_before_footer_post_loop';
-	add_action( $location_hook, 'triphub_related_posts', 5 );
 }
 endif;
 add_action( 'wp', 'triphub_related_post_location', 10 );
