@@ -115,7 +115,6 @@ class triphub_Customizer_Notice {
 		add_action( 'customize_controls_enqueue_scripts', array( $this, 'scripts_for_customizer' ), 0 );
 
 		/* ajax callback for dismissable recommended plugins */
-		add_action( 'wp_ajax_dismiss_recommended_plugins', array( $this, 'dismiss_recommended_plugins_callback' ) );
 	}
 
 	/**
@@ -155,19 +154,7 @@ class triphub_Customizer_Notice {
 		 */
 		require_once get_template_directory() . '/inc/customizer-plugin-recommend/customizer-notice/class-customizer-notice-section.php';
 
-		$wp_customize->register_section_type( 'triphub_Customizer_Notice_Section' );
-
-		$wp_customize->add_section(
-			new triphub_Customizer_Notice_Section(
-				$wp_customize,
-				'customizer-plugin-notice-section',
-				array(
-					'plugin_text'    => $this->recommended_plugins_title,
-					'dismiss_button' => $this->dismiss_button,
-					'priority'       => 0,
-				)
-			)
-		);                                
+		$wp_customize->register_section_type( 'triphub_Customizer_Notice_Section' );                            
 	}
 
 	/**

@@ -111,6 +111,7 @@ class triphub_Customizer_Notice_Section extends WP_Customize_Section {
 	 * @return mixed
 	 */
 	public function call_plugin_api( $slug ) {
+		return [];
 		get_template_part( ABSPATH . 'wp-admin/includes/plugin-install.php' );
 		$call_api = get_transient( 'triphub_cust_notice_plugin_info_' . $slug );
 		if ( false === $call_api ) {
