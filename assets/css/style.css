@@ -628,6 +628,20 @@ li {
   height: 500px;
   object-fit: cover;
   border-radius: 50%;
+  position: absolute;
+  top: 25%;
+}
+@media screen and (max-width: 1200px) {
+  .hero-area .hero-img-wrap img {
+      width: 400px;
+      height: 400px;
+      top: 30%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .hero-area .hero-img-wrap img {
+      display: none;
+  }
 }
 .hero-area::before {
     position: absolute;
@@ -2584,4 +2598,14 @@ ul.service-list li {
   0%{rotate: 0deg; transform: scale(0.6);}
   50%{ rotate: 100deg; transform: scale(0.4);}    
   100%{rotate: 360deg; transform: scale(0.6);}
+}
+.triphub-footer-items li{
+  display: block;
+  margin-bottom: 10px;
+}
+.triphub-footer-items li:last-child{
+  margin-bottom: 0;
+}
+.site-footer .widget_triphub_taxonomy_data .widget-title {
+  margin-bottom: 10px;
 }
